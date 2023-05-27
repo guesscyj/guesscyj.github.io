@@ -1,13 +1,13 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>《Unix/Linux编程实践教程》学习心得 | BLOG</title><meta name="author" content="guesscyj"><meta name="copyright" content="guesscyj"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="正在更新中，敬请期待">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>《Unix/Linux编程实践教程》学习心得 | BLOG</title><meta name="author" content="guesscyj"><meta name="copyright" content="guesscyj"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="《Unix-Linux编程实践教程》学习心得简介本文章保存着作者在学习《Unix-Linux编程实践教程》的一些学习心得与笔记 shell是如何运行的？ 执行一个程序 建立一个进程 等待进程结束  shell的主循环while(!end_of_input){ ​		get command ​		execute command ​		wait for command to finish 一个程序运">
 <meta property="og:type" content="article">
 <meta property="og:title" content="《Unix&#x2F;Linux编程实践教程》学习心得">
 <meta property="og:url" content="http://example.com/2023/04/25/linux_parctice/index.html">
 <meta property="og:site_name" content="BLOG">
-<meta property="og:description" content="正在更新中，敬请期待">
+<meta property="og:description" content="《Unix-Linux编程实践教程》学习心得简介本文章保存着作者在学习《Unix-Linux编程实践教程》的一些学习心得与笔记 shell是如何运行的？ 执行一个程序 建立一个进程 等待进程结束  shell的主循环while(!end_of_input){ ​		get command ​		execute command ​		wait for command to finish 一个程序运">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png">
 <meta property="article:published_time" content="2023-04-25T13:54:14.000Z">
-<meta property="article:modified_time" content="2023-04-25T14:28:26.636Z">
+<meta property="article:modified_time" content="2023-05-21T12:19:25.477Z">
 <meta property="article:author" content="guesscyj">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2023/04/25/linux_parctice/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
@@ -55,8 +55,8 @@
   isPost: true,
   isHome: false,
   isHighlightShrink: false,
-  isToc: false,
-  postUpdate: '2023-04-25 22:28:26'
+  isToc: true,
+  postUpdate: '2023-05-21 20:19:25'
 }</script><noscript><style type="text/css">
   #nav {
     opacity: 1
@@ -160,6 +160,688 @@
       }
     }
     detectApple()
-    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">3</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">2</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><hr/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="BLOG"><span class="site-name">BLOG</span></a></span><div id="menus"><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">《Unix/Linux编程实践教程》学习心得</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-04-25T13:54:14.000Z" title="发表于 2023-04-25 21:54:14">2023-04-25</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-04-25T14:28:26.636Z" title="更新于 2023-04-25 22:28:26">2023-04-25</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="《Unix/Linux编程实践教程》学习心得"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><hr>
-<p><strong>正在更新中，敬请期待</strong></p>
-</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="http://example.com">guesscyj</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2023/04/25/linux_parctice/">http://example.com/2023/04/25/linux_parctice/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">BLOG</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2023/05/05/STL/" title="STL"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">STL</div></div></a></div><div class="next-post pull-right"><a href="/2023/04/25/hexo_foundation/" title="hexo基础教程"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">hexo基础教程</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">guesscyj</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">3</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">2</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/05/05/STL/" title="STL">STL</a><time datetime="2023-05-05T11:59:39.000Z" title="发表于 2023-05-05 19:59:39">2023-05-05</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/04/25/linux_parctice/" title="《Unix/Linux编程实践教程》学习心得">《Unix/Linux编程实践教程》学习心得</a><time datetime="2023-04-25T13:54:14.000Z" title="发表于 2023-04-25 21:54:14">2023-04-25</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/04/25/hexo_foundation/" title="hexo基础教程">hexo基础教程</a><time datetime="2023-04-25T13:52:25.000Z" title="发表于 2023-04-25 21:52:25">2023-04-25</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By guesscyj</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">5</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">2</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><hr/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="BLOG"><span class="site-name">BLOG</span></a></span><div id="menus"><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">《Unix/Linux编程实践教程》学习心得</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-04-25T13:54:14.000Z" title="发表于 2023-04-25 21:54:14">2023-04-25</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-05-21T12:19:25.477Z" title="更新于 2023-05-21 20:19:25">2023-05-21</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="《Unix/Linux编程实践教程》学习心得"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><hr>
+<h1 id="《Unix-Linux编程实践教程》学习心得"><a href="#《Unix-Linux编程实践教程》学习心得" class="headerlink" title="《Unix-Linux编程实践教程》学习心得"></a>《Unix-Linux编程实践教程》学习心得</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>本文章保存着作者在学习《Unix-Linux编程实践教程》的一些学习心得与笔记</p>
+<h1 id="shell是如何运行的？"><a href="#shell是如何运行的？" class="headerlink" title="shell是如何运行的？"></a>shell是如何运行的？</h1><ol>
+<li>执行一个程序</li>
+<li>建立一个进程</li>
+<li>等待进程结束</li>
+</ol>
+<h2 id="shell的主循环"><a href="#shell的主循环" class="headerlink" title="shell的主循环"></a>shell的主循环</h2><p>while(!end_of_input){</p>
+<p>​		get command</p>
+<p>​		execute command</p>
+<p>​		wait for command to finish</p>
+<h2 id="一个程序运行另一个程序"><a href="#一个程序运行另一个程序" class="headerlink" title="一个程序运行另一个程序"></a>一个程序运行另一个程序</h2><ol>
+<li>程序调用execvp</li>
+<li>内核从磁盘将程序载入</li>
+<li>内核将arglist复制到进程</li>
+<li>内核调用main(argc,argv)</li>
+</ol>
+<h2 id="执行一个新程序program-execvp"><a href="#执行一个新程序program-execvp" class="headerlink" title="执行一个新程序program:execvp()"></a>执行一个新程序program:execvp()</h2><p>execvp类似替换，调用后会将原程序结束替换执行，故位于execvp后的代码段无法执行。那么shell如何做到等待新指令而不退出?（建立1个新的进程，fork()）</p>
+<h2 id="建立新进程-process-fork"><a href="#建立新进程-process-fork" class="headerlink" title="建立新进程:process:fork()"></a>建立新进程:process:fork()</h2><p>fork()调用后内核做：</p>
+<ol>
+<li><p>分配新的内存块和内核数据结构</p>
+</li>
+<li><p>复制原来的进程到新的进程</p>
+</li>
+<li><p>向运行进程集添加新的进程</p>
+</li>
+<li><p>将控制返回给两个进程</p>
+</li>
+</ol>
+<h2 id="新进程结束-wait"><a href="#新进程结束-wait" class="headerlink" title="新进程结束:wait()"></a>新进程结束:wait()</h2><p><img src="/./Pic/wait" alt="wait_pic"></p>
+<p>pid &#x3D; wait(&amp;status):</p>
+<p>status保存子进程的返回状态,pid为子进程号。exit value记录退出值(exit(x))，signal number 记录信号序列，core dump flag记录发生错误并产生了内核映像</p>
+<h2 id="shell运行方式"><a href="#shell运行方式" class="headerlink" title="shell运行方式"></a>shell运行方式</h2><p><img src="/./Pic/shell" alt="shell_run"></p>
+<p>fork()创建子进程，exec()运行指定程序，wait()等待新进程结束</p>
+<h2 id="实现简单shell"><a href="#实现简单shell" class="headerlink" title="实现简单shell"></a>实现简单shell</h2><p><img src="/./Pic/simpleShell" alt="simpleShell"></p>
+<p>缺陷：</p>
+<ol>
+<li>无法正常退出（Ctrl+C生成SIGINT信号,杀死进程)</li>
+<li>参数读取</li>
+</ol>
+<h2 id="进程死亡（exit（））"><a href="#进程死亡（exit（））" class="headerlink" title="进程死亡（exit（））"></a>进程死亡（exit（））</h2><p>exit是fork的逆操作，进程调用exit来停止运行。</p>
+<p>系统调用_exit()进行以下操作：</p>
+<ol>
+<li>关闭所有文件描述符和目录描述符</li>
+<li>将该进程的PID置为init进程的PID</li>
+<li>如果父进程调用wait或waitpid来等待子进程结束，则通知父进程</li>
+<li>向父进程发送SIGCHLD</li>
+</ol>
+<h1 id="第9章-可编程的shell、shell变量和环境：编写自己的shell"><a href="#第9章-可编程的shell、shell变量和环境：编写自己的shell" class="headerlink" title="第9章 可编程的shell、shell变量和环境：编写自己的shell"></a>第9章 可编程的shell、shell变量和环境：编写自己的shell</h1><h2 id="sh的编程特征"><a href="#sh的编程特征" class="headerlink" title="sh的编程特征"></a>sh的编程特征</h2><ol>
+<li>变量</li>
+<li>I&#x2F;0(用户输入)</li>
+<li>if…then（控制）</li>
+<li>environment（环境变量）</li>
+</ol>
+<h2 id="smsh1-c-version-1"><a href="#smsh1-c-version-1" class="headerlink" title="smsh1.c - version 1"></a>smsh1.c - version 1</h2><p><img src="/./Pic/smsh1" alt="shellLogic"></p>
+<ol>
+<li><p>next_cmd:从输入流读入下一个命令。调用malloc来分配内存以接受任意长度的命令</p>
+</li>
+<li><p>splitline:将一个字符串分解为字符串数组。</p>
+</li>
+<li><p>execute：执行命令</p>
+</li>
+</ol>
+<p>解决问题：1.一行命令执行<br>2.Ctrl+d的正常退出</p>
+<h2 id="smsh2-c-version-2-if语句"><a href="#smsh2-c-version-2-if语句" class="headerlink" title="smsh2.c - version 2   if语句"></a>smsh2.c - version 2   if语句</h2><h3 id="shell中if语句"><a href="#shell中if语句" class="headerlink" title="shell中if语句"></a>shell中if语句</h3><p>if语句做条件检测。在shell中，exit(0)表示成功，所有的Unix语句都以exit(0)表示成功。</p>
+<p>if语句的条件当有一系列的命令时，<strong>最后一个命令的exit被用来作这个语句块的条件值</strong></p>
+<p><strong>关键字fi标识if块的结束</strong></p>
+<h3 id="增加if后的逻辑"><a href="#增加if后的逻辑" class="headerlink" title="增加if后的逻辑"></a>增加if后的逻辑</h3><p><img src="/./Pic/smsh2" alt="image-20230228110355817"></p>
+<h3 id="解析"><a href="#解析" class="headerlink" title="解析"></a>解析</h3><h4 id="编译指令"><a href="#编译指令" class="headerlink" title="编译指令"></a>编译指令</h4><p>gcc -o smsh2 smsh2.c splitline.c execute.c process.c controlflow.c</p>
+<h4 id="改动地方"><a href="#改动地方" class="headerlink" title="改动地方"></a>改动地方</h4><ol>
+<li>修改主程序，将execute执行前交给process.c判断是否可以执行</li>
+<li>process.c。判断程序是否进入if段和执行非if段的语句</li>
+<li>controlflow.c是shell中if语句此时的状态判断和反馈接下来的行为，为处理if段</li>
+<li>process.c类似与control.c的启动判断</li>
+</ol>
+<h4 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h4><ol>
+<li>如何处理if中多条指令判断，最后一条为判断条件</li>
+<li>此程序是否支持if嵌套</li>
+</ol>
+<h2 id="smsh3-c-version-3-环境变量"><a href="#smsh3-c-version-3-环境变量" class="headerlink" title="smsh3.c -version 3 环境变量"></a>smsh3.c -version 3 环境变量</h2><h3 id="shell中环境变量"><a href="#shell中环境变量" class="headerlink" title="shell中环境变量"></a>shell中环境变量</h3><p>环境变量3要素：变量名，值，是否为全局</p>
+<p>可以用链表，树等如何数据结构实现</p>
+<p>struct var {</p>
+<p>char *str;</p>
+<p>int global;</p>
+<p>};</p>
+<p>static struct var_tab[MAXVARS]</p>
+<h3 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h3><p>VLstore(char* var,char* val):增加&#x2F;更新</p>
+<p>VLookup(char* var):取得var的值</p>
+<p>VList输出列表到stdout</p>
+<p><img src="/./Pic/smsh3" alt="smsh3"></p>
+<h3 id="smsh3-c解析"><a href="#smsh3-c解析" class="headerlink" title="smsh3.c解析"></a>smsh3.c解析</h3><p>编译指令：gcc smsh3.c splitline.c execute.c process.c controlflow.c builtin.c varlib.c -o smsh3</p>
+<p>环境变量设置方法： day&#x3D;monday	（禁止使用空格将其分开argv[0]）</p>
+<p>查看环境变量： set</p>
+<p>修改变量局部性：export day</p>
+<p>VLstore():注册环境变量</p>
+<p>VLexport():修改环境变量局部性</p>
+<p>VLlist():输出所有环境变量</p>
+<p>vLlookup():查询，调用find_item</p>
+<p>new_string():分配环境变量空间</p>
+<p>find_item():查询</p>
+<p>okname():环境变量合法检查</p>
+<p>改动地方：能够申请环境变量，无法访问环境变量（用户)</p>
+<p>子程序无法调用环境变量，变量替换</p>
+<h2 id="smsh4-c-version-4-个性化设置（环境）"><a href="#smsh4-c-version-4-个性化设置（环境）" class="headerlink" title="smsh4.c version 4-个性化设置（环境）"></a>smsh4.c version 4-个性化设置（环境）</h2><h3 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h3><p>环境是每个程序都可以存取的一个字符串数组,使用extern char **environ;即可访问</p>
+<p><img src="/./Pic/environModel" alt="environmodel"></p>
+<p>execlp():execlp()会从PATH 环境变量所指的目录中查找符合参数file的文件名, 找到后便执行该文件, 然后将第二个以后的参数当做该文件的argv[0]、argv[1]……, 最后一个参数必须用空指针(NULL)作结束。 </p>
+<p>environ:environ指针指向的数组是唯一的例外，当内核执行系统调用execve时，它将数组和字符串复制到新的程序的数据空间，而不是直接替换S</p>
+<p><img src="/./Pic/environCopy" alt="environCopy"></p>
+<p><strong>子进程不能修改父进程环境,但fork和exec时，整个环境都主动复制了，所以通过环境来传递数据比较方便，快捷</strong></p>
+<p>char* getenv(const char *name):在当前环境变量中查找环境变量name</p>
+<p>int setenv(const char *name,const char *value,int overwrite):创建环境变量</p>
+<p>int unsetenv(const char *name):删除环境变量</p>
+<p>VLenviron2table,VLtable2environ，将环境变量读入table,将environ转换</p>
+<h2 id="未解决问题"><a href="#未解决问题" class="headerlink" title="未解决问题"></a>未解决问题</h2><p>(1). 变量替换</p>
+<p>(2).输入&#x2F;输出重定向</p>
+<h1 id="I-x2F-0重定向和管道"><a href="#I-x2F-0重定向和管道" class="headerlink" title="I&#x2F;0重定向和管道"></a>I&#x2F;0重定向和管道</h1><p><strong>概念和技巧</strong></p>
+<ul>
+<li>I&#x2F;O重定向：概念与原因</li>
+<li>标准输入、输出和标准错误的定义</li>
+<li>重定向标准I&#x2F;0到文件</li>
+<li>使用fork来为其他程序重定向</li>
+<li>管道（pipe）</li>
+<li>创建管道后调用fork</li>
+</ul>
+<p><strong>相关的系统调用与函数</strong></p>
+<ul>
+<li>dup、dup2</li>
+<li>pipe</li>
+</ul>
+<h2 id="10-1-shell编程"><a href="#10-1-shell编程" class="headerlink" title="10.1 shell编程"></a>10.1 shell编程</h2><p>进程间的通信:I&#x2F;O重定向和管道</p>
+<p>ls &gt; my.files</p>
+<h2 id="10-2-一个shell应用程序：监视系统用户"><a href="#10-2-一个shell应用程序：监视系统用户" class="headerlink" title="10.2 一个shell应用程序：监视系统用户"></a>10.2 一个shell应用程序：监视系统用户</h2><p>系统通过一个shell脚本，监控系统用户的登陆和注销</p>
+<p>系统用户被分为3个集合，注销，不变，新增</p>
+<p><img src="/./Pic/%E9%87%8D%E5%AE%9A%E5%90%91" alt="重定向"></p>
+<p>shell脚本体现了三个重要的思路</p>
+<ul>
+<li>shell脚本的功能:与C相比简单易用</li>
+<li>软件工具的灵活性：每一个工具完成一项特定的、通用的功能</li>
+<li>I&#x2F;O重定向和管道的使用和作用</li>
+</ul>
+<h2 id="10-3-标准I-x2F-O与重定向的若干概念"><a href="#10-3-标准I-x2F-O与重定向的若干概念" class="headerlink" title="10.3 标准I&#x2F;O与重定向的若干概念"></a>10.3 标准I&#x2F;O与重定向的若干概念</h2><p>I&#x2F;O重定向基于标准数据流的原理。标准数据流分为</p>
+<ul>
+<li>标准输入：需要处理的数据流</li>
+<li>标准输出：结束数据流</li>
+<li>标准错误输出：错误数据流</li>
+</ul>
+<h3 id="标准文件描述符"><a href="#标准文件描述符" class="headerlink" title="标准文件描述符"></a>标准文件描述符</h3><p><img src="/./Pic/std" alt="std"></p>
+<p>所有的Unix工具都使用文件描述符0、1和2</p>
+<p>标准输入文件描述符：0</p>
+<p>标准输出文件描述符：1</p>
+<p>标准错误输出文件描述符：2</p>
+<h3 id="I-x2F-0重定向"><a href="#I-x2F-0重定向" class="headerlink" title="I&#x2F;0重定向"></a>I&#x2F;0重定向</h3><p>who &gt; userlist	将stdout连接到一个文件</p>
+<p>sort &lt; data		 将stdin连接到一个文件</p>
+<p>who | sort		将stdout连接到stdin</p>
+<h3 id="最低可用文件描述符-Lowest-Available-fd"><a href="#最低可用文件描述符-Lowest-Available-fd" class="headerlink" title="最低可用文件描述符(Lowest-Available-fd)"></a>最低可用文件描述符(Lowest-Available-fd)</h3><p>文件描述符？一个数组的索引号。每个进程都有其打开的一组文件。这些打开的文件被保持在一个数字中。文件描述符就是某文件在此数组中的索引</p>
+<p><img src="/./Pic/fd" alt="fd"></p>
+<p><strong>进程级别的文件描述符表</strong>：内核为每个进程维护一个文件描述符表，该表记录了文件描述符的相关信息，包括文件描述符、指向打开文件表中记录的指针。</p>
+<p><strong>系统级别的打开文件表</strong>：内核对所有打开文件维护的一个进程共享的打开文件描述表，表中存储了处于打开状态文件的相关信息，包括文件类型、访问权限、文件操作函数(file_operations)等。</p>
+<p><strong>系统级别的 i-node 表</strong>：i-node 结构体记录了文件相关的信息，包括文件长度，文件所在设备，文件物理位置，创建、修改和更新时间等，”ls -i” 命令可以查看文件 i-node 节点</p>
+<h2 id="10-4-如何将stdin定向到文件"><a href="#10-4-如何将stdin定向到文件" class="headerlink" title="10.4 如何将stdin定向到文件"></a>10.4 如何将stdin定向到文件</h2><h3 id="方法1：-close-then-open"><a href="#方法1：-close-then-open" class="headerlink" title="方法1： close then open"></a>方法1： close then open</h3><p>close:挂断一个文件描述符的连接（close(0):将标准输入与终端设备的连接切断）</p>
+<p>open:将一个文件连接到stdin上</p>
+<h3 id="方法2：open-close-dup-close"><a href="#方法2：open-close-dup-close" class="headerlink" title="方法2：open..close..dup..close"></a>方法2：open..close..dup..close</h3><p>open(file):打开stdin将要重定向的文件。返回一个文件描述符</p>
+<p>close(0):关闭文件描述符0</p>
+<p>dup(fd):将文件描述符fd做复制。此次复制使用最低可用文件描述符号0</p>
+<p>close(fd):使用close(fd)来关闭文件的原始连接,只留下文件描述符0的连接</p>
+<p><img src="/./Pic/dup" alt="dup"></p>
+<p>dup小结：#include&lt;unistd.h&gt;</p>
+<pre><code>    int = dup(oldfd)
+
+    int= dup2(oldfd,otherfd)
+</code></pre>
+<p>dup执行的是修改指向的操作</p>
+<p>oldfd:需要复制的文件描述符</p>
+<p>ohterfd复制oldfd后得到的文件描述符</p>
+<p>int为返回值，是指向后的文件描述符值</p>
+<h2 id="10-5-为其他程序重定向I-x2F-O-who-gt-userlist"><a href="#10-5-为其他程序重定向I-x2F-O-who-gt-userlist" class="headerlink" title="10.5 为其他程序重定向I&#x2F;O: who &gt; userlist"></a>10.5 为其他程序重定向I&#x2F;O: who &gt; userlist</h2><ol>
+<li>fork:创建子进程，将命令委托给子进程执行</li>
+<li>close:关闭子进程相关的标准文件描述符，子进程此时拥有与父进程相同的文件描述符</li>
+<li>creat:创建修改的文件，之前关闭的文件描述符为最小的将执行该文件</li>
+<li>exec: <strong>exec相关函数虽然会替换数据，但文件描述符为进程是属性，故无法改变</strong></li>
+</ol>
+<p><img src="/./Pic/stdoutRedirect" alt="stdRedirect"></p>
+<p><img src="/./Pic/stdinRedirect" alt="stdRedirect"></p>
+<pre><code>实现who &gt;&gt; userlog:  将creat改为open即可。close(1)只是修改当前进程的文件描述符
+
+sort &lt; data : close(0)
+</code></pre>
+<h2 id="10-6-管道编程"><a href="#10-6-管道编程" class="headerlink" title="10.6 管道编程"></a>10.6 管道编程</h2><h3 id="管道"><a href="#管道" class="headerlink" title="管道"></a>管道</h3><p>pipe:创建管道</p>
+<p>#include &lt;unistd.h&gt;</p>
+<p>result &#x3D; pipe(int array[2])</p>
+<p>result: -1 for false,0 for success</p>
+<p>pipe会为array分配最低的两个文件描述符</p>
+<p>array[0]:in</p>
+<p>array[1]:out</p>
+<p>pipedemo.c</p>
+<p><img src="/./Pic/pipedemo" alt="pipe"></p>
+<p>管道中的通讯信息需要buf来获取输出到显示屏上write(1,buf,len)</p>
+<h3 id="共享管道"><a href="#共享管道" class="headerlink" title="共享管道"></a>共享管道</h3><p><img src="/./Pic/sharepipe" alt="sharepipe"></p>
+<p>write():对应in,输入文件</p>
+<p>read():对应out,读出文件</p>
+<p>本例中，子进程只写入文件，父进程写入文件，读出文件</p>
+<p>switch中为什么没有break：oops处理调用函数中发生了错误的情况，调用exit结束进程，多读注释</p>
+<h3 id="pipe"><a href="#pipe" class="headerlink" title="pipe"></a>pipe</h3><p>parent做输入重定向 &lt;，child做输出重定向 &gt;</p>
+<p><img src="/./Pic/pipe" alt="pipe"></p>
+<h3 id="技术细节：管道并非文件"><a href="#技术细节：管道并非文件" class="headerlink" title="技术细节：管道并非文件"></a>技术细节：管道并非文件</h3><p>管道像文件一样，不带有任何结构的字节序列。</p>
+<p>1.从管道中读数据：</p>
+<p>（1）管道读取阻塞：当进程试图从管道中读数据时，进程被挂起直到数据被写进管道。</p>
+<p>（2）管道的读取结束标志：当所有的写者关闭了管道的写数据端时，试图从管道读取数据的 调用返回0意味着文件结束</p>
+<p>（3）多个读者可能会引起麻烦：管道是一个队列。当两个就进程对同一个读取，数据无法完整读出</p>
+<p>2.向管道中写数据：</p>
+<p>（1）写入数据阻塞直到管道中有空间去写新数据：管道中的数据没有读走，导致无法写入</p>
+<p>（2）写入必须保证一个最小的块大小：系统限制了管道写入是的缓存拆分大小</p>
+<p>（3）读通道关闭，写通道便无法写入</p>
+<h1 id="第11章-连接到近端或远端的进程：服务器与Socket（套接字）"><a href="#第11章-连接到近端或远端的进程：服务器与Socket（套接字）" class="headerlink" title="第11章 连接到近端或远端的进程：服务器与Socket（套接字）"></a>第11章 连接到近端或远端的进程：服务器与Socket（套接字）</h1><h2 id="程序处理的数据"><a href="#程序处理的数据" class="headerlink" title="程序处理的数据"></a>程序处理的数据</h2><ul>
+<li>磁盘文件</li>
+<li>设备</li>
+<li>管道</li>
+<li>Sockets</li>
+</ul>
+<p>（1,2）磁盘&#x2F;设备文件：用open命令连接，用read和write传递数据</p>
+<p>（3）管道：用pipe命令创建，用fork共享，用read和write传递数据</p>
+<p>（4）sockets：用sockets、listen、和connect连接，用read和write传递数据</p>
+<h2 id="11-3-bc-Unix中使用的计算器"><a href="#11-3-bc-Unix中使用的计算器" class="headerlink" title="11.3 bc:Unix中使用的计算器"></a>11.3 bc:Unix中使用的计算器</h2><p><img src="/./Pic/bc_dc" alt="bc_dc"></p>
+<p>bc_dc可用的思想：</p>
+<ol>
+<li>客户&#x2F;服务器模型</li>
+<li>双向通信</li>
+<li>永久性服务（协同进程）</li>
+</ol>
+<h3 id="11-3-1-编写bc：pipe、fork、dup、exec"><a href="#11-3-1-编写bc：pipe、fork、dup、exec" class="headerlink" title="11.3.1 编写bc：pipe、fork、dup、exec"></a>11.3.1 编写bc：pipe、fork、dup、exec</h3><ol>
+<li>创建两个管道</li>
+<li>创建一个进程来运行dc</li>
+<li>在新创建的进程中，重定向标准输入和标准输出到管道，运行exec dc</li>
+<li>在父进程中，读取并分析用户的输入，将命令传给dc,dc响应读取，并把响应传给用户</li>
+</ol>
+<p>be_dc():修改文件描述符，为dc分配相关的文件描述符（文件描述符为属性，exec后不会改变）</p>
+<p>be_bc():修改bc文件描述符，分析数据，传递给dc</p>
+<h3 id="协同进程"><a href="#协同进程" class="headerlink" title="协同进程"></a>协同进程</h3><p><img src="/./Pic/coprocess" alt="coprocess"></p>
+<p>UNIX系统过滤程序从标准输入读取数据, 向标准输出写数据. 几个过滤程序通常在shell管道中连接. 当一个过滤程序既产生某个过滤的输入, 又读取该过滤程序的输出时, 它就变成了协同进程(coprocess).</p>
+<p>协同进程是一个，而非两个，是从标准输入、标准输出的那个。协同进程类似帮助另一个进程接收标准输入并过滤，处理输出数据并输出到标准输出设备一样。与其他进程共享数据</p>
+<p>优点：</p>
+<ol>
+<li>信息共享</li>
+<li>加快计算</li>
+<li>模块化</li>
+<li>方便</li>
+</ol>
+<p>示例：</p>
+<ol>
+<li><p>两个管道，一个标准输入，一个标准输出</p>
+</li>
+<li><p>fork</p>
+</li>
+<li><p>父进程从子进程只读，父进程处理后输出子进程</p>
+</li>
+</ol>
+<h3 id="fdopen"><a href="#fdopen" class="headerlink" title="fdopen()"></a>fdopen()</h3><p>表头文件：#include&lt;stdio.h&gt;</p>
+<p>定义函数：FILE * fdopen(int fd,  const char * mode);</p>
+<p>功能：将文件描述符像文件一样使用，返回一个打开的文件流fdopen(0,”r”);使用fgets等读取文件的方式来读出内容</p>
+<p><img src="/./Pic/fopenAndPopen" alt="fopenAndPopen"></p>
+<h2 id="11-4-popen-让进程看似文件"><a href="#11-4-popen-让进程看似文件" class="headerlink" title="11.4 popen: 让进程看似文件"></a>11.4 popen: 让进程看似文件</h2><p>表头文件：#include &lt;stdio.h&gt;</p>
+<p>定义函数：FILE * popen( const char * command,const char * type);</p>
+<p>功能：建立管道连到子进程的标准输出设备或标准输入设备，返回一个文件指针，利用此文件指针来读取子进程的输出设备或是写入到子进程的标准输入设备中</p>
+<ul>
+<li>type &#x3D;&#x3D; “r”:调用进程读进 command 的标准输出</li>
+<li>type &#x3D;&#x3D; “w”: 调用进程读进 command 的标准输入</li>
+</ul>
+<p>执行一天命令，而像文件一样可以读写</p>
+<h3 id="访问数据：文件、应用程序接口-api-和服务器"><a href="#访问数据：文件、应用程序接口-api-和服务器" class="headerlink" title="访问数据：文件、应用程序接口(api)和服务器"></a>访问数据：文件、应用程序接口(api)和服务器</h3><h3 id="1-从文件获取数据"><a href="#1-从文件获取数据" class="headerlink" title="1.从文件获取数据"></a>1.从文件获取数据</h3><p>通过读文件来获取数据（be like “who”)。文件的信息服务并不完美。客户端程序依赖特定的文件格式和结构体中的特定成员名称。</p>
+<h3 id="2-从函数获取数据"><a href="#2-从函数获取数据" class="headerlink" title="2.从函数获取数据"></a>2.从函数获取数据</h3><p>一个库函数用标准的函数接口来封装数据的格式和位置。</p>
+<p>使用库函数的两种方法：</p>
+<p>1.程序使用静态连接来包含实际的函数代码。但这些函数有可能包含的并不是正确的文件名或文件格式</p>
+<p>2.程序调用共享库中的函数，但这些共享库并不一定安装到所有系统上</p>
+<h3 id="3-从进程获取数据"><a href="#3-从进程获取数据" class="headerlink" title="3.从进程获取数据"></a>3.从进程获取数据</h3><p>创建一个进程到另一个进程的连接。</p>
+<p>调用独立程序获取数据的好处有：</p>
+<p>服务器程序可以使用任何程序设计语言编写：shell,c,java等</p>
+<p>客户端和服务器端程序可以在不同的机器上运行，所要做的只是和不同机器上的一个进程连接</p>
+<h2 id="11-5-socket-与远端进程相连"><a href="#11-5-socket-与远端进程相连" class="headerlink" title="11.5 socket:与远端进程相连"></a>11.5 socket:与远端进程相连</h2><p>管道的缺陷：</p>
+<p>1.管道的通信需要使用fork来共享</p>
+<p>2.管道的通信只能在同一台主机上运行</p>
+<p>struct sockaddr_in{</p>
+<p>　　sa_family_t 　　sin_family;　　&#x2F;&#x2F;地址族，常用AF_INET</p>
+<p>　　uint16_t    　　sin_port;　　  &#x2F;&#x2F;16位TCP&#x2F;UDP端口号</p>
+<p>　　struct in_addr　　sin_addr;　　 &#x2F;&#x2F;32位IP地址</p>
+<p>　　cha　　　　　　  sin_zero[8]　 &#x2F;&#x2F;不使用</p>
+<p>}；</p>
+<p>struct in_addr{</p>
+<p>　　in_addr_t　　　　s_addr;　　  &#x2F;&#x2F;32位IPV4地址</p>
+<p>}</p>
+<h3 id="工作步骤"><a href="#工作步骤" class="headerlink" title="工作步骤"></a>工作步骤</h3><ol>
+<li>向内核申请一个socket</li>
+<li>绑定地址到socket上，地址包括主机，端口</li>
+<li>在socket上，允许接入呼叫并设置队列长度为1</li>
+<li>等待&#x2F;接收呼叫</li>
+<li>传输数据</li>
+<li>关闭连接</li>
+</ol>
+<h3 id="socket"><a href="#socket" class="headerlink" title="socket()"></a>socket()</h3><p>socket：创建一个套接字描述符（客户端和服务器端）,打开套接字（还无法读写）</p>
+<p>头文件：#include &lt;sys&#x2F;types.h&gt; #include &lt;sys&#x2F;socket.h&gt;</p>
+<p>函数定义：int socket(int domain,int type,int protocol);</p>
+<p>domain:通信域		type：socket类型。SOCK_STREAM类型管道</p>
+<p>propotol:协议socket中使用的协议，默认为0，0代表标准协议（内核中网络代码所使用的协议）</p>
+<p>返回值：sockid ：成功</p>
+<p>作用于服务器端和客户端</p>
+<p><strong>套接字(socket)是一个抽象层，应用程序可以通过它发送或接收数据，可对其像对文件一样打开、读写、关闭等。套接字允许应用程序将I&#x2F;O插入到网络中，并与网络中的其他应用程序进行通信，类似门票</strong></p>
+<hr>
+<h3 id="bind"><a href="#bind" class="headerlink" title="bind()"></a>bind()</h3><p>bind:绑定一个地址到socket（数据的接收和发送操作）</p>
+<p>头文件：#include &lt;sys&#x2F;types.h&gt; #include &lt;sys&#x2F;socket.h&gt;</p>
+<p>函数定义： int bind(int sockfd,const struct sockaddr *addr,socklen_t addrlen);</p>
+<p>sockfd: socket的fd,其值为socket（）创建成功的返回值		addr:指向包含地址结构的指针</p>
+<p>addrlen：地址长度，其值为<strong>sizeof(struct sockaddr)</strong></p>
+<p>返回值： 0 for success , -1 for failed</p>
+<p>作用于服务器端和客户端</p>
+<p><strong>bind将一个地址分配sockfd,addr为自己申明，创建，之后填充其具体的主机地址和端口号，最后填写地址族			类型提交门票后，给位置，准备操作</strong></p>
+<hr>
+<h3 id="listen"><a href="#listen" class="headerlink" title="listen()"></a>listen()</h3><p>listen: 监听socket上的连接</p>
+<p>头文件： #include &lt;sys&#x2F;socket.h&gt;</p>
+<p>函数定义： int listen(int sockfd,int backlog);</p>
+<p>sockfd: socket的fd，接收请求的socket，将要转换状态的套接字 		backlog：队列长度，最大的请求数量限制</p>
+<p>返回值：0 for success, -1 for failed</p>
+<p>作用于服务器端</p>
+<p><strong>将主动套接字转化为监听套接字（listening socket）	用户变安保，待定</strong>	</p>
+<hr>
+<h3 id="accept"><a href="#accept" class="headerlink" title="accept()"></a>accept()</h3><p>accept:接受socket上的一个连接</p>
+<p>头文件：#include &lt;sys&#x2F;types.h&gt; #include &lt;sys&#x2F;socket.h&gt;</p>
+<p>函数定义：int accept(int listenfd,struct sockaddr *addr,int *addrlen);</p>
+<p>listenfd:向服务器的请求到达的描述符，保安		addr:指向呼叫者地址结构的指针</p>
+<p>addrlen:指向呼叫者地址结构长度的指针	<strong>sizeof(struct sockaddr)</strong></p>
+<p>返回值： fd for success, -1 for failed （fd为非负连接描述符）</p>
+<p>作用于服务器端</p>
+<p>**accept函数阻塞当前进程，等待来自客户端的连接请求到达侦听描述符listenfd,然后在addr中填写客户端的套接字地址，并返回一个已连接描述符（connected descriptor),该描述符被用来Unix I&#x2F;O函数与客户端通信。	**</p>
+<p><strong>监听描述符通常创建一次，存在于服务器的整个生命周期。已连接描述符是客户端和服务器端之间已经建立起来了的连接的一个端点，每次请求时都会创建一次</strong></p>
+<p><img src="/./Pic/listenfd&connect" alt="listenfd&amp;connect"></p>
+<hr>
+<h3 id="connect"><a href="#connect" class="headerlink" title="connect"></a>connect</h3><p>connect:连接到socket,客户端通过调用connect来建立与服务器的连接</p>
+<p>头文件：#include &lt;sys&#x2F;socket.h&gt;</p>
+<p>函数定义：int connect(int clientfd,const struct sockaddr *addr,socklen_t addrlen);</p>
+<p>clientfd:用于建立连接的socket		addr:指向服务器地址结构的指针</p>
+<p>addrlen:结构的长度，sizeof(sockaddr_in)</p>
+<p>0 for success, -1 for failed</p>
+<p>作用于客户端</p>
+<p><strong>connect函数试图与套接字地址为addr的服务器建立一个因特网连接。connect函数会阻塞，直到连接成功或发生错误。成功：clientfd描述符就准备好读写，并且得到的连接是由套接字对(x:y,addr.sin_addr:addr.sin_port)刻画，x表示客户端的IP地址，y表示临时端口，确定了客户端主机上的客户端进程。</strong></p>
+<h2 id="服务器：远程ls"><a href="#服务器：远程ls" class="headerlink" title="服务器：远程ls"></a>服务器：远程ls</h2><p><img src="/./Pic/ls" alt="ls"></p>
+<p>rls实现的3要素：</p>
+<ul>
+<li>协议</li>
+<li>客户端程序</li>
+<li>服务器端程序</li>
+</ul>
+<p>协议包含请求和应答。首先，客户端发送一行包含目录名称的请求。服务器读取该目录名后打开并读取该目录。返回文件列表。客户端循环读取文件列表，直到服务器挂断连接产生文件结尾标准。</p>
+<p>rls只要难道在理解代码。<strong>保证服务器端不被破坏，sanitize只读取文件的格式&#x2F;、数字，英文，不读；防止有其他命令执行</strong></p>
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>socket编程，socket,socket套接字</p>
+<p>客户端&#x2F;服务器端模式</p>
+<p>客户端请求限制，服务器保护</p>
+<p>struct sockaddr_in{</p>
+<p>　　sa_family_t 　　sin_family;　　&#x2F;&#x2F;地址族，常用AF_INET</p>
+<p>　　uint16_t    　　sin_port;　　  &#x2F;&#x2F;16位TCP&#x2F;UDP端口号</p>
+<p>　　struct in_addr　　sin_addr;　　 &#x2F;&#x2F;32位IP地址</p>
+<p>　　cha　　　　　　  sin_zero[8]　 &#x2F;&#x2F;不使用</p>
+<p>}；</p>
+<p>struct in_addr{</p>
+<p>　　in_addr_t　　　　s_addr;　　  &#x2F;&#x2F;32位IPV4地址</p>
+<p>}</p>
+<p>sin_port:自定义 例如：13000、15000</p>
+<p>sin_family:通常AF_INET</p>
+<p>sin_addr:自定义,常用 struct hostent 中的h_addr 来赋值Ip地址</p>
+<h1 id="连接和协议：编写web服务器"><a href="#连接和协议：编写web服务器" class="headerlink" title="连接和协议：编写web服务器"></a>连接和协议：编写web服务器</h1><p>概念与技巧</p>
+<ul>
+<li>服务器端socket:目的和构造</li>
+<li>客户端socket:目的和构造</li>
+<li>客户&#x2F;服务器协议</li>
+<li>服务器设计:使用fork来接收多个请求</li>
+<li>僵尸(zombie)问题</li>
+<li>HTTP</li>
+</ul>
+<h2 id="服务器设计重点"><a href="#服务器设计重点" class="headerlink" title="服务器设计重点"></a>服务器设计重点</h2><p>3个主要操作：</p>
+<ol>
+<li>服务器设立服务</li>
+<li>客户连接到服务器</li>
+<li>服务器和客户处理事物</li>
+</ol>
+<h2 id="建立连接"><a href="#建立连接" class="headerlink" title="建立连接"></a>建立连接</h2><p>服务器：</p>
+<ol>
+<li>创建一个socket: socket &#x3D; socket(PF_INET,SOCK_STREAM,0)</li>
+<li>给socket绑定一个地址: bind(sock,&amp;addr,sizeof(addr))</li>
+<li>监听接入请求: listen(sock,queue_size)</li>
+</ol>
+<p>客户:</p>
+<ol>
+<li>创建一个socket: socket &#x3D; socket(PF_INET,SOCK_STREAM,0)</li>
+<li>使用该socket连接服务器: connect(sock,&amp;serv_addr,sizeof(serv_addr))</li>
+</ol>
+<h2 id="客户-x2F-服务器的会话"><a href="#客户-x2F-服务器的会话" class="headerlink" title="客户&#x2F;服务器的会话"></a>客户&#x2F;服务器的会话</h2><p>1.DIY:服务器接收到请求自己处理</p>
+<p>2.代理：服务器接收请求，创建一个新进程来处理工作</p>
+<h3 id="优缺点比较："><a href="#优缺点比较：" class="headerlink" title="优缺点比较："></a>优缺点比较：</h3><p>1.DIY用于快速简单的任务</p>
+<p>2.代理用于慢速的更加复杂的人物</p>
+<p>3.使用SIGCHLD来阻止僵尸进程问题</p>
+<h3 id="僵尸进程"><a href="#僵尸进程" class="headerlink" title="僵尸进程"></a>僵尸进程</h3><p>定义：子进程比父进程先结束，而父进程没释放子进程资源</p>
+<p>危害：PID占用，资源浪费，占用不必要资源</p>
+<p>解决方法：signal(SIGCHLD,child_waiter)，但子进程结束时，会发出SIGCHILD信号，默认情况下会无视，通过调用child_waiter解决</p>
+<p>关于child_waiter：可使用wait和waitpid来处理子进程资源问题</p>
+<h3 id="wait的区别"><a href="#wait的区别" class="headerlink" title="wait的区别"></a>wait的区别</h3><h4 id="问题1"><a href="#问题1" class="headerlink" title="问题1"></a>问题1</h4><p>已知fd &#x3D; accept(sock,NULL,NULL)会在服务器中调用，accept会阻塞进程</p>
+<p>wait为阻塞形调用，waitpid为非阻塞形。当调用wait时，会阻塞当前进程，此时，wait打断系统，accpet将会返回-1,打破循环。</p>
+<p>故不应该使用wait,使用waitpid。</p>
+<h4 id="问题2"><a href="#问题2" class="headerlink" title="问题2"></a>问题2</h4><p>当有多个子进程同时退出时，wait为阻塞形，将会导致第2个信号被阻塞，第3个信号丢失。</p>
+<h4 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h4><p>waitpid(-1,NULL,WNOHANG)</p>
+<p>-1:表示等待的pid，此处表示等待所有的子进程</p>
+<p>NULL:第二位用来获取子进程的状态，此处不要</p>
+<p>WNOHANG:表示waitpid：没有僵尸进程，则不必等待</p>
+<h2 id="编写web服务器"><a href="#编写web服务器" class="headerlink" title="编写web服务器"></a>编写web服务器</h2><p>通常的功能:</p>
+<ul>
+<li>列举目录信息ls</li>
+<li>显示文件内容cat</li>
+<li>运行程序exec</li>
+</ul>
+<h3 id="web服务器协议"><a href="#web服务器协议" class="headerlink" title="web服务器协议"></a>web服务器协议</h3><h4 id="HTTP"><a href="#HTTP" class="headerlink" title="HTTP"></a>HTTP</h4><p>HTTP全称为HyperText Transfer Protocol</p>
+<p>保证客户端与服务器之间的通信</p>
+<p>是客户端与服务器之间的请求-响应协议(相当于交互)</p>
+<p>客户端和服务器间进行请求是常用方式:</p>
+<p><strong>GET</strong></p>
+<p><strong>POST</strong></p>
+<h4 id="GET"><a href="#GET" class="headerlink" title="GET"></a>GET</h4><p><strong>GET：从服务器请求数据后获取服务端数据</strong></p>
+<p><strong>常见发起GET请求的方式有：</strong></p>
+<blockquote>
+<p>URL 、src&#x2F;href、表单（form）</p>
+</blockquote>
+<p><strong>格式:</strong></p>
+<blockquote>
+<p>index.php?userName&#x3D;jack&amp;password&#x3D;123<br>语法<strong>（key&#x3D;value&amp;key&#x3D;value）：</strong> userName&#x3D;jack&amp;password&#x3D;123 叫做查询字符串</p>
+</blockquote>
+<p><strong>特点：</strong></p>
+<blockquote>
+<p>参数名与参数值之间没有空格<br>参数值不需要使用单双引号包括</p>
+</blockquote>
+<p>具体情况使用GET方法：</p>
+<p>1.客户端与服务端的交互像是一个提问(如查询操作、搜索操作、读操作) </p>
+<p>2.请求是为了查找资源，HTML表单数据仅用来帮助搜索</p>
+<p>3.请求结果无持续性的副作用（如进行搜索）</p>
+<p>4.收集的数据及HTML表单内的输入字段名称的总长不超过1024个字符</p>
+<p>5.获取参数或者短小的内容时用GET，如 ?id&#x3D;5 或者 ?title&#x3D;abc&amp;url&#x3D;http…</p>
+<p>GET方式提交数据特点：</p>
+<p>1、get方式在url后面拼接参数，只能以文本的形式传递参数</p>
+<p>2、传递的数据量小，4kb左右（不同浏览器会有差异）</p>
+<p>3、安全性低，会将信息显示在地址栏</p>
+<p>4、速度快，通常用于对安全性要求不高的请求</p>
+<h4 id="POST"><a href="#POST" class="headerlink" title="POST"></a>POST</h4><blockquote>
+<p><strong>POST：就是发送、提交。向服务器提交&#x2F;发送要被处理的数据。</strong></p>
+</blockquote>
+<p><strong>格式:</strong></p>
+<p>注意⚠️：与GET不同的是，<strong>查询字符串（名称&#x2F;值）</strong>是在 POST 请求的 HTTP 消息主体中发送的：</p>
+<blockquote>
+<p>POST &#x2F;test&#x2F;demo_form.asp HTTP&#x2F;1.1<br>Host: <a href="https://link.zhihu.com/?target=http://w3schools.com">http://w3schools.com</a><br>name1&#x3D;value1&amp;name2&#x3D;value2</p>
+</blockquote>
+<p>具体情况使用POST方法：</p>
+<p>1.交互是一个命令或订单(order)，比提问包含更多信息 </p>
+<p>2.交互改变了服务器端的资源并被用户察觉，例如订阅某项服务  </p>
+<p>3.用户需要对交互产生的结果负责 </p>
+<p>4.请求的结果有持续性的副作用，例如，数据库内添加新的数据行</p>
+<p>5.GET方法可能会产生很长的URL，或许会超过某些浏览器与服务器对URL长度的限制，所以使用POST</p>
+<p>7.获取大断的内容用POST，通常表单用 POST 方式提交数据，表单的method必须设置为POST</p>
+<p>8.对数据有变更的请求（增删）用post；（比如发贴，回复的form 用的是 POST）</p>
+<p><strong>POST方式提交数据特点：</strong></p>
+<p>1、post提交数据相对于get的安全性高一些。（注意：抓包软件也会抓到post的内容，安全性要求高可以进行加密）</p>
+<p>2、传递数据量大，请求对数据长度没有要求</p>
+<p>3、请求不会被缓存，也不会保留在浏览器的历史记录中</p>
+<p>4、用于密码等安全性要求高的场合，提交数据量较大的场合，如上传文件，发布文章等</p>
+<p>5、POST方式提交数据上限默认为8M（可以在PHP的配置文件post_max_size选项中修改）</p>
+<blockquote>
+<p><strong>举个 ：</strong><br>访问银行网站或请求带有个人隐私的时候，把账户、密码这些放在URL里被人拦截是不安全的， 所以HTTP设计了POST请求，他可以把请求信息（创建资源，资源的内容）放在HTTP请求里</p>
+</blockquote>
+<p><strong>总结：</strong></p>
+<blockquote>
+<p>GET在浏览器回退时是无害的，而POST会再次提交请求<br>GET产生的URL地址可以被Bookmark，而POST不可以<br>GET请求会被浏览器主动cache，而POST不会，除非手动设置<br>GET请求只能进行url编码，而POST支持多种编码方式<br>GET请求参数会被完整保留在浏览器历史记录里，而POST中的参数不会被保留<br>GET请求在URL中传送的参数是有长度限制的，而POST没有<br>对参数的数据类型，GET只接受ASCII字符，而POST没有限制<br>GET参数通过URL传递，POST放在Request body中<br>GET比POST更不安全，因为参数直接暴露在URL上，所以不能用来传递敏感信息</p>
+</blockquote>
+<p><strong>GET和POST还有一个重大区别，简单的说：</strong></p>
+<blockquote>
+<p>GET产生一个TCP数据包；POST产生两个TCP数据包</p>
+</blockquote>
+<ol>
+<li><p>在网络环境好的情况下，发一次包的时间和发两次包的时间差别基本可以无视</p>
+</li>
+<li><p>而在网络环境差的情况下，两次包的TCP在验证数据包完整性上，有非常大的优点</p>
+</li>
+<li><p>并不是所有浏览器都会在POST中发送两次包，Firefox就只发送一次</p>
+</li>
+</ol>
+<h4 id="HTTP请求格式"><a href="#HTTP请求格式" class="headerlink" title="HTTP请求格式"></a>HTTP请求格式</h4><p>GET &#x2F;index.html HTTP&#x2F;1.0			命令 参数 所用协议的版本号</p>
+<p>本程序中web中只需要填写参数</p>
+<h1 id="第13章-基于数据报-Datagram-的编程：-编写许可证服务器"><a href="#第13章-基于数据报-Datagram-的编程：-编写许可证服务器" class="headerlink" title="第13章 基于数据报(Datagram)的编程： 编写许可证服务器"></a>第13章 基于数据报(Datagram)的编程： 编写许可证服务器</h1><p>学习目标:</p>
+<ul>
+<li>基于数据报的编程，数据报socket</li>
+<li>TCP和UDP</li>
+<li>许可证服务器</li>
+<li>软件时间戳(Software ticket)</li>
+<li>设计健壮系统</li>
+<li>设计分布式系统</li>
+<li>Unix域的socket</li>
+</ul>
+<h2 id="软件控制"><a href="#软件控制" class="headerlink" title="软件控制"></a>软件控制</h2><p>程序的运行需要内存，CPU，和一些系统资源。操作系统关心这些问题，但程序需要关心另外一件事，程序的拥有者的允许</p>
+<p>从合法性上讲，需要一个许可证(license)，技术限制和自觉遵守</p>
+<h2 id="许可证管理"><a href="#许可证管理" class="headerlink" title="许可证管理"></a>许可证管理</h2><p>许可证程序运行过程：</p>
+<ol>
+<li>用户U运行被许可的程序P</li>
+<li>程序P向服务器S请求运行许可</li>
+<li>服务器检查当前运行程序P的用户数</li>
+<li>如果上限未达到，S给予许可，程序P运行</li>
+<li>如果到达上限，S拒绝许可，程序P告诉U稍后再试</li>
+</ol>
+<p>有点类似于现在的云玩游戏的排队系统</p>
+<p><img src="C:\Users\j'j'b\Desktop\unix-linux-study\datagram\Pic\software"></p>
+<p>程序的创建者要编写所有的程序：应用程序和服务器。两个程序作为一个系统，服务器给予应用程序运行许可和实施许可证条款。如果许可证服务器不在运行，应用程序将得不到许可，不能运行。</p>
+<h2 id="数据报socket"><a href="#数据报socket" class="headerlink" title="数据报socket"></a>数据报socket</h2><p>你也可以叫它UDP</p>
+<p>流socket传送数据类似于打电话</p>
+<p>数据报socket类似于发邮件，客户不必建立连接，只要向特定的地址发送消息，而服务器进程在该地址接受消息</p>
+<h3 id="流与数据报的比较"><a href="#流与数据报的比较" class="headerlink" title="流与数据报的比较"></a>流与数据报的比较</h3><p>流socket使用的网络协议叫TCP（传输控制协议：Transmission Control Protocol）</p>
+<p>数据报socket使用的叫UDP(用户数据报协议：User Datagram Protocol)</p>
+<p><img src="C:\Users\j'j'b\Desktop\unix-linux-study\datagram\Pic\TCPUDP" alt="tcp&amp;udp"></p>
+<p>数据报的只要部分：目的地址，返回地址，消息</p>
+<p>UDP访问模式：socket(PF_INET,SOCK_DGRAM,0)与tcp创建的时候参数不同，且程序中使用sendto和recvfrom，而不调用listen</p>
+<p>dgrecv.c:接受数据报（服务器端）</p>
+<p>dgsend.c:发送数据报（客户端）</p>
+<p>dgram.c:辅助函数（创建socket细节，封装细节）</p>
+<p>调用: </p>
+<p>服务器端：.&#x2F; dgrecv 4444 &amp;</p>
+<p>客户端: .&#x2F;dgsend 127.0.0.1 4444 “test info”</p>
+<p>.&#x2F;dgsend ipaddr postnumber 消息</p>
+<h3 id="sendto"><a href="#sendto" class="headerlink" title="sendto()"></a>sendto()</h3><p>目标:从socket发送消息</p>
+<p>头文件：#include &lt;sys&#x2F;types.h&gt; #include &lt;sys&#x2F;socket.h&gt;</p>
+<p>函数定义： nchars &#x3D; sendto(int socket,const void *msg,size_t len,int flags,const struct sockaddr *dest,socklen_t dest_len)</p>
+<p>​	socket: socket id				msg:发送的字符类型的数组				len:发送的字符数</p>
+<p>​	flags: 比特的集合，设置发送属性，0表示普通		dest: 指向远端socket地址的指针		dest_len:地址长度</p>
+<p>return: -1 出错 ；nchars:发送的字符数</p>
+<h3 id="recvfrom"><a href="#recvfrom" class="headerlink" title="recvfrom()"></a>recvfrom()</h3><p>目标：从socket接受消息</p>
+<p>头文件：#include &lt;sys&#x2F;types.h&gt;	#include &lt;sys&#x2F;socket.h&gt;</p>
+<p>函数定义: nchars &#x3D; recvfrom(int socket,const void *msg,size_t len ,int flags,const strcut sockaddr * sender,socklen_t *sender_len)</p>
+<p>socket:socket id			msg:字符类型的数组		len:接收的字符数</p>
+<p>flags: 表示接收属性的比特的集合，0表示普通	sender：指向远端socket的地址和指针	sender_len:地址长度</p>
+<p>return：-1 出错；nchars：发送的字符数</p>
+<h3 id="数据报应答"><a href="#数据报应答" class="headerlink" title="数据报应答"></a>数据报应答</h3><p>编译和测试: gcc dgrecv.c dgram.c -o dgrecv</p>
+<p>​					gcc dgsend.c dgram.c -o desend</p>
+<p>数据报从一个socket发送到另一个socket。发送者使用sendto来指定消息、长度和目的地。接收者使用recvfrom接收消息。</p>
+<h2 id="许可证服务器"><a href="#许可证服务器" class="headerlink" title="许可证服务器"></a>许可证服务器</h2><p><img src="C:\Users\j'j'b\Desktop\unix-linux-study\datagram\Pic\helo" alt="HELO"></p>
+<p>带用户队列的许可证服务器</p>
+<p>do_transaction():负责与建立了连接的socket进行交易</p>
+<p>客户：HELO:代表申请票据		GBYE：代表退还票据</p>
+<p>服务器:对用户的不同请求进行处理，严格规范了交互请求消息的格式</p>
+<p>对服务器进行解析:</p>
+<p>TICKET_AVAIL：分配给用户的票据是否可用 flag</p>
+<p>MAXUSER:限制申请票据用户</p>
+<p>say_hello():申请票据，即相关输出，严格要求格式,如果pid &#x3D;&#x3D; 0,表示可用票据</p>
+<p>say_goodbye():收回票据，严格要求格式</p>
+<p>handle_request():由4个字符的命令带一个参数组成，服务器检查命令，调用相关函数，即使命令不合法，调用相应应答，客户会阻塞，直到收到应答</p>
+<p>编译命令:</p>
+<p>gcc lserv1.c lserv_funcs1.c dgram.c -o lserv1</p>
+<p>gcc lclnt1.c lclnt_funcs1.c dgram.c -o lclnt1</p>
+<h2 id="处理一些问题"><a href="#处理一些问题" class="headerlink" title="处理一些问题"></a>处理一些问题</h2><h3 id="客户端崩溃"><a href="#客户端崩溃" class="headerlink" title="客户端崩溃"></a>客户端崩溃</h3><p>客户端崩溃，客户将不会归还票据</p>
+<p><img src="C:\Users\j'j'b\Desktop\unix-linux-study\datagram\Pic\clientBreak" alt="clientBreak"></p>
+<p>如果某个进程已经不存在了，服务器可以把该进程从数组中去除，释放其占用票据。</p>
+<p>1.收回丢失的票据：调度</p>
+<p>使用alarm和signal来周期地调用一个函数</p>
+<p><img src="C:\Users\j'j'b\Desktop\unix-linux-study\datagram\Pic\alarm" alt="alarm"></p>
+<p>考虑问题：</p>
+<p>1）在服务器处理客户请求时，触发SIGALAM信号，收回票据，将对票据签出列表及相关数据结构和共享变量修改</p>
+<p>​	故在处理客户申请时，应该关闭alarm</p>
+<p>2.收回丢失的票据:编程</p>
+<p>服务器如何判断进程已经不存在</p>
+<p>1.popen运行ps,查看相关进程pid是否存在</p>
+<p>2.向进程发送信号,使用kill(pid,0)。如果进程不存在，内核将不会发送信号，而是返回错误并设置errno为ESRCH</p>
+<p>关键代码if((ticket_arrat[i]!&#x3D;TICKER_AVAIL)&amp;&amp;(kill(ticket_array[i],0)&#x3D;&#x3D;-1)&amp;&amp;(errno&#x3D;&#x3D;ESRCH))</p>
+<h3 id="服务器崩溃"><a href="#服务器崩溃" class="headerlink" title="服务器崩溃"></a>服务器崩溃</h3><p>服务器崩溃的后果：签出列表丢失，失去进程持有的票据记录。新客户不可以再运行，因为分发许可证的程序已经不存在</p>
+<p>解决方法：重启服务器</p>
+<p><img src="C:\Users\j'j'b\Desktop\unix-linux-study\datagram\Pic\servBreak" alt="servBreak"></p>
+<p>重启服务器可以使新的客户运行，但有新的问题:</p>
+<p>1.重启的服务器票据数组为空；服务器含有新的未被取走的票据列表，而崩溃前可能已经发送了票据，再重启会产生更多票据</p>
+<p>2.持有旧的服务器的票据的客户在归还使，会被认为是伪造票据</p>
+<p>1.票据验证</p>
+<p>票据含有数组编号和pid,服务器检查签出列表，如果为空，则认为是自己先去赋予的，服务器将会把票据加到列表中，但可以会已经被分配给新的客户</p>
+<p>或者服务器拒绝表中没有的票据，重新申请</p>
+<p>2.协议中增加验证</p>
+<p>CLIENT：VALD TICKID</p>
+<p>SERVER: GOOD or FAIL invalid ticket</p>
+<p>3.客户端增加验证</p>
+<p><img src="C:\Users\j'j'b\Desktop\unix-linux-study\datagram\Pic\validate" alt="validate"></p>
+<h3 id="编译命令"><a href="#编译命令" class="headerlink" title="编译命令"></a>编译命令</h3><p>gcc lserv2.c lserv_funcs2.c dgram.c -o lserv2</p>
+<p>gcc lclnt2.c lclnt_funcs2.c dgram.c -o lclnt2</p>
+<h2 id="分布式许可证服务器"><a href="#分布式许可证服务器" class="headerlink" title="分布式许可证服务器"></a>分布式许可证服务器</h2><p>服务器和客户在同一台机器上运行，不易发生错误，但在不同的主机上时，可能会发生错误</p>
+<h3 id="重复的进程ID"><a href="#重复的进程ID" class="headerlink" title="重复的进程ID"></a>重复的进程ID</h3><p>进程ID在同一台主机上唯一，但在不同主机上可能相同。可能会使一个进程收到多张票据</p>
+<h3 id="回收票据"><a href="#回收票据" class="headerlink" title="回收票据"></a>回收票据</h3><p>kill(pid,0)能够杀死同一台主机上的进程，但不能跨主机执行</p>
+<p>可在每台主机上运行一个服务器，但会带来很多新的问题</p>
+<h3 id="主机崩溃"><a href="#主机崩溃" class="headerlink" title="主机崩溃"></a>主机崩溃</h3><p>客户和服务器都可能会崩溃,不同主机崩溃会导致不同的问题</p>
+<p>建立分布式许可证系统来支持,有一下3种方法:</p>
+<ol>
+<li>客户端服务器和中央服务器通信(客户与本地服务器交互，本地服务器与中央交互)</li>
+<li>每个客户都和中央服务器通信(本地服务器只发给客户)</li>
+<li>客户服务器和客户服务器通信(本地与其他本地交互)</li>
+</ol>
+<h2 id="unix域socket"><a href="#unix域socket" class="headerlink" title="unix域socket"></a>unix域socket</h2><h3 id="文件名作为socket地址"><a href="#文件名作为socket地址" class="headerlink" title="文件名作为socket地址"></a>文件名作为socket地址</h3><p>2种连接: 流连接和数据报连接。TCP和UDP</p>
+<p>2中socket地址:Internet地址和本地地址</p>
+<p>​	Internet地址包括主机ID和端口号。本地地址包括Unix地址，无主机ID和端口号</p>
+<p>本地地址只有同一台主机才能发送给他。</p>
+<h3 id="编译指令、运行"><a href="#编译指令、运行" class="headerlink" title="编译指令、运行"></a>编译指令、运行</h3><p>gcc logfiled.c -o logfiled</p>
+<p>.&#x2F;logfiled &gt;&gt; visitorlog</p>
+<p>gcc logfilec.c -o logfilec</p>
+<p>.&#x2F;logfilec ‘Nice system.Swell software’</p>
+<h2 id="小结-1"><a href="#小结-1" class="headerlink" title="小结"></a>小结</h2><p><img src="C:\Users\j'j'b\Desktop\unix-linux-study\datagram\Pic\main" alt="main"></p>
+<h1 id="第14章线程机制：并发函数的使用"><a href="#第14章线程机制：并发函数的使用" class="headerlink" title="第14章	线程机制：并发函数的使用"></a>第14章	线程机制：并发函数的使用</h1><ul>
+<li>程序的执行路线</li>
+<li>多线程程序</li>
+<li>创建及销毁线程</li>
+<li>使用互斥锁机制保证线程间数据的安全共享</li>
+<li>使用条件变量同步线程间的数据传输</li>
+<li>传递多个参数给线程</li>
+<li>pthread_create、pthread_join</li>
+<li>pthread_mutex_lock、pthread_mutex_unlock</li>
+<li>pthread_cond_wait、pthread_cond_signal</li>
+</ul>
+<h2 id="线程"><a href="#线程" class="headerlink" title="线程"></a>线程</h2><p>不间断地跟踪指令执行的路径被称为执行路线(thread of execution)</p>
+<p>单线程执行过程:</p>
+<p><img src="C:/Users/j'j'b/Desktop/unix-linux-study/thread/Pic/single" alt="single"></p>
+<p>多线程执行过程:</p>
+<p>​	一条执行路线进入main函数。初始的路线新建了一条执行路线来运行print_msg(),初始路线继续执行下一条指令从而新建了另一条路线来对print_msg进行第二次调用</p>
+<p><img src="C:/Users/j'j'b/Desktop/unix-linux-study/thread/Pic/multi" alt="multi"></p>
+<h3 id="pthread-create"><a href="#pthread-create" class="headerlink" title="pthread_create()"></a>pthread_create()</h3><p>目标：创建一个新的线程</p>
+<p>头文件：#include &lt;pthread.h&gt;</p>
+<p>函数原型：int pthread_create(pthread_t *thread,pthread_attr_t *attr,void *( * func)(void *),void *arg);</p>
+<p>参数: thread:指向pthread_t类型变量的指针			attr:指向pthread_attr_t类型变量的指针,或者为NULL</p>
+<p>func:指向新进程所运行函数的指针		arg:传递给func的参数</p>
+<p>返回值:0 for success；errcode for failed</p>
+<p>​	创建一条新的指向路线，在该路线中调用func(arg)，attr制定路线属性。func是一个函数，它接收一个指针作为它的参数，并且结束后返回一个指针。都被定义为void *,以返回任意类型</p>
+<h3 id="pthread-join"><a href="#pthread-join" class="headerlink" title="pthread_join()"></a>pthread_join()</h3><p>目标:等待某线程终止</p>
+<p>头文件:#include &lt;pthread.h&gt;</p>
+<p>函数原型:int pthread_join(pthread_t *thread,void **retval)</p>
+<p>参数: thread: 所等待的线程	retval:指向某存储线程返回值的变量</p>
+<p>返回值: 0 for success, errcode for failed</p>
+<p>pthread_join将会使线程挂起直到thread制定的线程终止。如果retval不是null,线程的返回值就存储在由retval指向的变量中</p>
+<h2 id="线程间的分工合作"><a href="#线程间的分工合作" class="headerlink" title="线程间的分工合作"></a>线程间的分工合作</h2><p>3个例子 twordcount1.c twordcount2.c twordcount3.c</p>
+<h3 id="twordcount1-c"><a href="#twordcount1-c" class="headerlink" title="twordcount1.c"></a>twordcount1.c</h3><p>两个线程，一个计数器</p>
+<p><img src="C:/Users/j'j'b/Desktop/unix-linux-study/thread/Pic/twordcount1" alt="twordcount1"></p>
+<p>​	读文件，计算文件中的单词数量，使用全局变量作为计数器，线程之间无合作来修改同一个变量</p>
+<p>​	所有的线程对同一个计数器进行++操作，会出现访问同一个寄存器的问题，可能会有两个线程同时读取出来，放入同一个值，导致计算错误</p>
+<h3 id="twordcount2-c"><a href="#twordcount2-c" class="headerlink" title="twordcount2.c"></a>twordcount2.c</h3><p>两个线程，一个计数器，一个互斥量</p>
+<p><img src="C:/Users/j'j'b/Desktop/unix-linux-study/thread/Pic/twordcount2" alt="twordcount3"></p>
+<p>​	在twordcount1.c的基础上增加了互斥量 pthread_mutex_t counter_lock &#x3D; PTHREAD_MUTEX_INITIALIZER</p>
+<p>​	在申请访问寄存器前，等待互斥锁解开再锁住互斥锁，每次进行计数器访问时，都将遵守该操作。如果一个线程不遵守，直接去修改计数器的值的话，程序员也没办法。且等待互斥锁打开增加了线程运行的时间。降低了系统的性能</p>
+<h3 id="twordcount3-c"><a href="#twordcount3-c" class="headerlink" title="twordcount3.c"></a>twordcount3.c</h3><p>两个线程，两个计数器，向线程传递多个参数</p>
+<p><img src="C:/Users/j'j'b/Desktop/unix-linux-study/thread/Pic/twordcount3" alt="twordcount3"></p>
+<p>​	使用一个结构体作为参数struct arg_set{char *fname,int count};来保存各自的单词数量，传递给pthread_create()参数变为了结构体。两个线程同时计算自己文件的单词数量。</p>
+<p>​	传递本地结构体指针的方法避免了对互斥锁的依赖，且消除了全局变量的使用。消耗了内存空间来保证运行时间以及运行的正确性。</p>
+<h3 id="互斥锁"><a href="#互斥锁" class="headerlink" title="互斥锁"></a>互斥锁</h3><h4 id="pthread-mutex-lock"><a href="#pthread-mutex-lock" class="headerlink" title="pthread_mutex_lock()"></a>pthread_mutex_lock()</h4><p>目标： 等待互斥锁解开然后再锁住互斥量</p>
+<p>头文件： #include &lt;pthread.h&gt;</p>
+<p>函数原型： int pthread_mutex_lock(pthread_mutex_t *mutex)</p>
+<p>参数： mutex： 指向互斥锁对象的指针</p>
+<p>返回值： 0 for success, errcode for failed</p>
+<h4 id="pthread-mutex-unlock"><a href="#pthread-mutex-unlock" class="headerlink" title="pthread_mutex_unlock()"></a>pthread_mutex_unlock()</h4><p>目标：给互斥量解锁</p>
+<p>头文件： #include &lt;pthread.h&gt;</p>
+<p>函数原型： int pthread_mutex_unlock(pthread_mutex_t *mutex)</p>
+<p>参数： mutex： 指向互斥锁对象的指针</p>
+<p>返回值：0 for success, errcode for failed</p>
+<p>正常情况下，互斥量会支持运行，但如果一个线程试图解锁一个没被锁住的互斥量，会发生死锁，互斥量具有诸多问题，不同线程系统有不同的出理方案。</p>
+<h2 id="14-4线程与进程"><a href="#14-4线程与进程" class="headerlink" title="14.4线程与进程"></a>14.4线程与进程</h2><p>线程与进程比较:</p>
+<h3 id="1-共享数据空间"><a href="#1-共享数据空间" class="headerlink" title="1.共享数据空间"></a>1.共享数据空间</h3><p>​	fork出的进程将复制原有进程的一份数据空间，不同进程对数据空间进行操作，互不影响。</p>
+<p>​	thread出的线程，共享着同一个数据空间。故在编程时需考虑malloc、free等问题。往往是不释放空间，导致了空间的囤积。返回静态局部变量的指针的函数无法兼容多线程环境。</p>
+<h3 id="2-文件描述符"><a href="#2-文件描述符" class="headerlink" title="2.文件描述符"></a>2.文件描述符</h3><p>​	fork出的进程，将复制文件描述符，子进程继承了父进程的文件描述符，当子进程的文件描述符关闭时，父进程的仍然打开，互不影响。</p>
+<p>​	thread出的线程，会将同一个文件描述符<strong>传递</strong>给多个线程，关闭了一个文件描述符，相当于将所有的线程的文件描述符关闭，共享着文件描述符。</p>
+<h3 id="3-进程ID"><a href="#3-进程ID" class="headerlink" title="3.进程ID"></a>3.进程ID</h3><p>​	fork出的进程，拥有着不同的进程ID。</p>
+<p>​	thread出的线程，都共享着同一个进程ID，故当某一个线程执行有关进程的操作时，会影响到所有的线程，如exec、fork、exit等。exec会调用新的程序取代当前进程，当前进程中的所有线程都将被取代。线程fork，其他的线程不会复制给新的进程。</p>
+<h3 id="信号处理"><a href="#信号处理" class="headerlink" title="信号处理"></a>信号处理</h3><p>​	不同的系统线程处理系统不同，此处说一下linux内核处理方式</p>
+<p>对于进程下的多个线程来说， 信号处理函数是共享的。</p>
+<p>在Linux内核实现中， 同一个线程组里的所有线程都共享一个struct sighand结构体。 该结构体中存在一个action数组， 数组共64项， 每一个成员都是k_sigaction结构体类型， 一个k_sigaction结构体对应一个信号的信号处理函数。</p>
+<h2 id="14-5-线程间互通消息"><a href="#14-5-线程间互通消息" class="headerlink" title="14.5 线程间互通消息"></a>14.5 线程间互通消息</h2><p>线程间没有使用signal机制，而是一个类似于signal的机制。</p>
+<p>使用加锁的变量机制来传递数据。线程挂起。线程共享数据。</p>
+<p><img src="C:/Users/j'j'b/Desktop/unix-linux-study/thread/Pic/thread_singal" alt="thread_singal"></p>
+<h3 id="pthread-cond-wait"><a href="#pthread-cond-wait" class="headerlink" title="pthread_cond_wait"></a>pthread_cond_wait</h3><p>目标： 使线程挂起，等待某条件变量的信号</p>
+<p>头文件： #include &lt;pthread.h&gt;</p>
+<p>函数原型： int pthread_cond_wait(pthread_cond_t *cond,pthread_mutex_t *mutex)；</p>
+<p>参数： cond 指向某条件变量的指针		mutex 指向互斥锁对象的指针</p>
+<p>返回值：	0 for success,errcode for failed</p>
+<p>pthread_cond_wait是线程挂起，直到另一个线程通过条件变量发出消息。pthread_cond_wait函数总是和互斥锁一起使用。先自动释放指定的锁，然后等待条件变量的变化。</p>
+<h3 id="pthread-cond-signal"><a href="#pthread-cond-signal" class="headerlink" title="pthread_cond_signal"></a>pthread_cond_signal</h3><p>目标： 唤醒一个正在等待的线程</p>
+<p>头文件： #include &lt;pthread.h&gt;</p>
+<p>函数原型： int pthread_cond_signal(pthread_cond_t *cond)；</p>
+<p>参数: 	cond 指向某条件变量的指针</p>
+<p>返回值： 	0 for success,errcode for failed</p>
+<p>pthread_cond_signal 会通过条件变量cond发消息。若没有线程等待消息，则不会发生什么，若有多个线程等待，唤醒其中一个。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="http://example.com">guesscyj</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2023/04/25/linux_parctice/">http://example.com/2023/04/25/linux_parctice/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">BLOG</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2023/05/05/STL/" title="STL"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">STL</div></div></a></div><div class="next-post pull-right"><a href="/2023/04/25/hexo_foundation/" title="hexo基础教程"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">hexo基础教程</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">guesscyj</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">5</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">2</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E3%80%8AUnix-Linux%E7%BC%96%E7%A8%8B%E5%AE%9E%E8%B7%B5%E6%95%99%E7%A8%8B%E3%80%8B%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%97"><span class="toc-number">1.</span> <span class="toc-text">《Unix-Linux编程实践教程》学习心得</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%80%E4%BB%8B"><span class="toc-number">1.1.</span> <span class="toc-text">简介</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#shell%E6%98%AF%E5%A6%82%E4%BD%95%E8%BF%90%E8%A1%8C%E7%9A%84%EF%BC%9F"><span class="toc-number">2.</span> <span class="toc-text">shell是如何运行的？</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#shell%E7%9A%84%E4%B8%BB%E5%BE%AA%E7%8E%AF"><span class="toc-number">2.1.</span> <span class="toc-text">shell的主循环</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E4%B8%AA%E7%A8%8B%E5%BA%8F%E8%BF%90%E8%A1%8C%E5%8F%A6%E4%B8%80%E4%B8%AA%E7%A8%8B%E5%BA%8F"><span class="toc-number">2.2.</span> <span class="toc-text">一个程序运行另一个程序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%89%A7%E8%A1%8C%E4%B8%80%E4%B8%AA%E6%96%B0%E7%A8%8B%E5%BA%8Fprogram-execvp"><span class="toc-number">2.3.</span> <span class="toc-text">执行一个新程序program:execvp()</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BB%BA%E7%AB%8B%E6%96%B0%E8%BF%9B%E7%A8%8B-process-fork"><span class="toc-number">2.4.</span> <span class="toc-text">建立新进程:process:fork()</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%B0%E8%BF%9B%E7%A8%8B%E7%BB%93%E6%9D%9F-wait"><span class="toc-number">2.5.</span> <span class="toc-text">新进程结束:wait()</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#shell%E8%BF%90%E8%A1%8C%E6%96%B9%E5%BC%8F"><span class="toc-number">2.6.</span> <span class="toc-text">shell运行方式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0%E7%AE%80%E5%8D%95shell"><span class="toc-number">2.7.</span> <span class="toc-text">实现简单shell</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%9B%E7%A8%8B%E6%AD%BB%E4%BA%A1%EF%BC%88exit%EF%BC%88%EF%BC%89%EF%BC%89"><span class="toc-number">2.8.</span> <span class="toc-text">进程死亡（exit（））</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC9%E7%AB%A0-%E5%8F%AF%E7%BC%96%E7%A8%8B%E7%9A%84shell%E3%80%81shell%E5%8F%98%E9%87%8F%E5%92%8C%E7%8E%AF%E5%A2%83%EF%BC%9A%E7%BC%96%E5%86%99%E8%87%AA%E5%B7%B1%E7%9A%84shell"><span class="toc-number">3.</span> <span class="toc-text">第9章 可编程的shell、shell变量和环境：编写自己的shell</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#sh%E7%9A%84%E7%BC%96%E7%A8%8B%E7%89%B9%E5%BE%81"><span class="toc-number">3.1.</span> <span class="toc-text">sh的编程特征</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#smsh1-c-version-1"><span class="toc-number">3.2.</span> <span class="toc-text">smsh1.c - version 1</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#smsh2-c-version-2-if%E8%AF%AD%E5%8F%A5"><span class="toc-number">3.3.</span> <span class="toc-text">smsh2.c - version 2   if语句</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#shell%E4%B8%ADif%E8%AF%AD%E5%8F%A5"><span class="toc-number">3.3.1.</span> <span class="toc-text">shell中if语句</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A2%9E%E5%8A%A0if%E5%90%8E%E7%9A%84%E9%80%BB%E8%BE%91"><span class="toc-number">3.3.2.</span> <span class="toc-text">增加if后的逻辑</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E6%9E%90"><span class="toc-number">3.3.3.</span> <span class="toc-text">解析</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BC%96%E8%AF%91%E6%8C%87%E4%BB%A4"><span class="toc-number">3.3.3.1.</span> <span class="toc-text">编译指令</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%94%B9%E5%8A%A8%E5%9C%B0%E6%96%B9"><span class="toc-number">3.3.3.2.</span> <span class="toc-text">改动地方</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%80%9D%E8%80%83"><span class="toc-number">3.3.3.3.</span> <span class="toc-text">思考</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#smsh3-c-version-3-%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="toc-number">3.4.</span> <span class="toc-text">smsh3.c -version 3 环境变量</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#shell%E4%B8%AD%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="toc-number">3.4.1.</span> <span class="toc-text">shell中环境变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8E%A5%E5%8F%A3"><span class="toc-number">3.4.2.</span> <span class="toc-text">接口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#smsh3-c%E8%A7%A3%E6%9E%90"><span class="toc-number">3.4.3.</span> <span class="toc-text">smsh3.c解析</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#smsh4-c-version-4-%E4%B8%AA%E6%80%A7%E5%8C%96%E8%AE%BE%E7%BD%AE%EF%BC%88%E7%8E%AF%E5%A2%83%EF%BC%89"><span class="toc-number">3.5.</span> <span class="toc-text">smsh4.c version 4-个性化设置（环境）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%8E%AF%E5%A2%83"><span class="toc-number">3.5.1.</span> <span class="toc-text">环境</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%AA%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98"><span class="toc-number">3.6.</span> <span class="toc-text">未解决问题</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#I-x2F-0%E9%87%8D%E5%AE%9A%E5%90%91%E5%92%8C%E7%AE%A1%E9%81%93"><span class="toc-number">4.</span> <span class="toc-text">I&#x2F;0重定向和管道</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#10-1-shell%E7%BC%96%E7%A8%8B"><span class="toc-number">4.1.</span> <span class="toc-text">10.1 shell编程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-2-%E4%B8%80%E4%B8%AAshell%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%EF%BC%9A%E7%9B%91%E8%A7%86%E7%B3%BB%E7%BB%9F%E7%94%A8%E6%88%B7"><span class="toc-number">4.2.</span> <span class="toc-text">10.2 一个shell应用程序：监视系统用户</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-3-%E6%A0%87%E5%87%86I-x2F-O%E4%B8%8E%E9%87%8D%E5%AE%9A%E5%90%91%E7%9A%84%E8%8B%A5%E5%B9%B2%E6%A6%82%E5%BF%B5"><span class="toc-number">4.3.</span> <span class="toc-text">10.3 标准I&#x2F;O与重定向的若干概念</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%87%E5%87%86%E6%96%87%E4%BB%B6%E6%8F%8F%E8%BF%B0%E7%AC%A6"><span class="toc-number">4.3.1.</span> <span class="toc-text">标准文件描述符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#I-x2F-0%E9%87%8D%E5%AE%9A%E5%90%91"><span class="toc-number">4.3.2.</span> <span class="toc-text">I&#x2F;0重定向</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%80%E4%BD%8E%E5%8F%AF%E7%94%A8%E6%96%87%E4%BB%B6%E6%8F%8F%E8%BF%B0%E7%AC%A6-Lowest-Available-fd"><span class="toc-number">4.3.3.</span> <span class="toc-text">最低可用文件描述符(Lowest-Available-fd)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-4-%E5%A6%82%E4%BD%95%E5%B0%86stdin%E5%AE%9A%E5%90%91%E5%88%B0%E6%96%87%E4%BB%B6"><span class="toc-number">4.4.</span> <span class="toc-text">10.4 如何将stdin定向到文件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B9%E6%B3%951%EF%BC%9A-close-then-open"><span class="toc-number">4.4.1.</span> <span class="toc-text">方法1： close then open</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B9%E6%B3%952%EF%BC%9Aopen-close-dup-close"><span class="toc-number">4.4.2.</span> <span class="toc-text">方法2：open..close..dup..close</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-5-%E4%B8%BA%E5%85%B6%E4%BB%96%E7%A8%8B%E5%BA%8F%E9%87%8D%E5%AE%9A%E5%90%91I-x2F-O-who-gt-userlist"><span class="toc-number">4.5.</span> <span class="toc-text">10.5 为其他程序重定向I&#x2F;O: who &gt; userlist</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-6-%E7%AE%A1%E9%81%93%E7%BC%96%E7%A8%8B"><span class="toc-number">4.6.</span> <span class="toc-text">10.6 管道编程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AE%A1%E9%81%93"><span class="toc-number">4.6.1.</span> <span class="toc-text">管道</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B1%E4%BA%AB%E7%AE%A1%E9%81%93"><span class="toc-number">4.6.2.</span> <span class="toc-text">共享管道</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#pipe"><span class="toc-number">4.6.3.</span> <span class="toc-text">pipe</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8A%80%E6%9C%AF%E7%BB%86%E8%8A%82%EF%BC%9A%E7%AE%A1%E9%81%93%E5%B9%B6%E9%9D%9E%E6%96%87%E4%BB%B6"><span class="toc-number">4.6.4.</span> <span class="toc-text">技术细节：管道并非文件</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC11%E7%AB%A0-%E8%BF%9E%E6%8E%A5%E5%88%B0%E8%BF%91%E7%AB%AF%E6%88%96%E8%BF%9C%E7%AB%AF%E7%9A%84%E8%BF%9B%E7%A8%8B%EF%BC%9A%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8ESocket%EF%BC%88%E5%A5%97%E6%8E%A5%E5%AD%97%EF%BC%89"><span class="toc-number">5.</span> <span class="toc-text">第11章 连接到近端或远端的进程：服务器与Socket（套接字）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A8%8B%E5%BA%8F%E5%A4%84%E7%90%86%E7%9A%84%E6%95%B0%E6%8D%AE"><span class="toc-number">5.1.</span> <span class="toc-text">程序处理的数据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-3-bc-Unix%E4%B8%AD%E4%BD%BF%E7%94%A8%E7%9A%84%E8%AE%A1%E7%AE%97%E5%99%A8"><span class="toc-number">5.2.</span> <span class="toc-text">11.3 bc:Unix中使用的计算器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#11-3-1-%E7%BC%96%E5%86%99bc%EF%BC%9Apipe%E3%80%81fork%E3%80%81dup%E3%80%81exec"><span class="toc-number">5.2.1.</span> <span class="toc-text">11.3.1 编写bc：pipe、fork、dup、exec</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%8F%E5%90%8C%E8%BF%9B%E7%A8%8B"><span class="toc-number">5.2.2.</span> <span class="toc-text">协同进程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#fdopen"><span class="toc-number">5.2.3.</span> <span class="toc-text">fdopen()</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-4-popen-%E8%AE%A9%E8%BF%9B%E7%A8%8B%E7%9C%8B%E4%BC%BC%E6%96%87%E4%BB%B6"><span class="toc-number">5.3.</span> <span class="toc-text">11.4 popen: 让进程看似文件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%BF%E9%97%AE%E6%95%B0%E6%8D%AE%EF%BC%9A%E6%96%87%E4%BB%B6%E3%80%81%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E6%8E%A5%E5%8F%A3-api-%E5%92%8C%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="toc-number">5.3.1.</span> <span class="toc-text">访问数据：文件、应用程序接口(api)和服务器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E4%BB%8E%E6%96%87%E4%BB%B6%E8%8E%B7%E5%8F%96%E6%95%B0%E6%8D%AE"><span class="toc-number">5.3.2.</span> <span class="toc-text">1.从文件获取数据</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E4%BB%8E%E5%87%BD%E6%95%B0%E8%8E%B7%E5%8F%96%E6%95%B0%E6%8D%AE"><span class="toc-number">5.3.3.</span> <span class="toc-text">2.从函数获取数据</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E4%BB%8E%E8%BF%9B%E7%A8%8B%E8%8E%B7%E5%8F%96%E6%95%B0%E6%8D%AE"><span class="toc-number">5.3.4.</span> <span class="toc-text">3.从进程获取数据</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-5-socket-%E4%B8%8E%E8%BF%9C%E7%AB%AF%E8%BF%9B%E7%A8%8B%E7%9B%B8%E8%BF%9E"><span class="toc-number">5.4.</span> <span class="toc-text">11.5 socket:与远端进程相连</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B7%A5%E4%BD%9C%E6%AD%A5%E9%AA%A4"><span class="toc-number">5.4.1.</span> <span class="toc-text">工作步骤</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#socket"><span class="toc-number">5.4.2.</span> <span class="toc-text">socket()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#bind"><span class="toc-number">5.4.3.</span> <span class="toc-text">bind()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#listen"><span class="toc-number">5.4.4.</span> <span class="toc-text">listen()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#accept"><span class="toc-number">5.4.5.</span> <span class="toc-text">accept()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#connect"><span class="toc-number">5.4.6.</span> <span class="toc-text">connect</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%9A%E8%BF%9C%E7%A8%8Bls"><span class="toc-number">5.5.</span> <span class="toc-text">服务器：远程ls</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%8F%E7%BB%93"><span class="toc-number">5.6.</span> <span class="toc-text">小结</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%BF%9E%E6%8E%A5%E5%92%8C%E5%8D%8F%E8%AE%AE%EF%BC%9A%E7%BC%96%E5%86%99web%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="toc-number">6.</span> <span class="toc-text">连接和协议：编写web服务器</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%AE%BE%E8%AE%A1%E9%87%8D%E7%82%B9"><span class="toc-number">6.1.</span> <span class="toc-text">服务器设计重点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BB%BA%E7%AB%8B%E8%BF%9E%E6%8E%A5"><span class="toc-number">6.2.</span> <span class="toc-text">建立连接</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%A2%E6%88%B7-x2F-%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E4%BC%9A%E8%AF%9D"><span class="toc-number">6.3.</span> <span class="toc-text">客户&#x2F;服务器的会话</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BC%98%E7%BC%BA%E7%82%B9%E6%AF%94%E8%BE%83%EF%BC%9A"><span class="toc-number">6.3.1.</span> <span class="toc-text">优缺点比较：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%83%B5%E5%B0%B8%E8%BF%9B%E7%A8%8B"><span class="toc-number">6.3.2.</span> <span class="toc-text">僵尸进程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#wait%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">6.3.3.</span> <span class="toc-text">wait的区别</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%97%AE%E9%A2%981"><span class="toc-number">6.3.3.1.</span> <span class="toc-text">问题1</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%97%AE%E9%A2%982"><span class="toc-number">6.3.3.2.</span> <span class="toc-text">问题2</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3"><span class="toc-number">6.3.3.3.</span> <span class="toc-text">解决</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BC%96%E5%86%99web%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="toc-number">6.4.</span> <span class="toc-text">编写web服务器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#web%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%8D%8F%E8%AE%AE"><span class="toc-number">6.4.1.</span> <span class="toc-text">web服务器协议</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#HTTP"><span class="toc-number">6.4.1.1.</span> <span class="toc-text">HTTP</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#GET"><span class="toc-number">6.4.1.2.</span> <span class="toc-text">GET</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#POST"><span class="toc-number">6.4.1.3.</span> <span class="toc-text">POST</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#HTTP%E8%AF%B7%E6%B1%82%E6%A0%BC%E5%BC%8F"><span class="toc-number">6.4.1.4.</span> <span class="toc-text">HTTP请求格式</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC13%E7%AB%A0-%E5%9F%BA%E4%BA%8E%E6%95%B0%E6%8D%AE%E6%8A%A5-Datagram-%E7%9A%84%E7%BC%96%E7%A8%8B%EF%BC%9A-%E7%BC%96%E5%86%99%E8%AE%B8%E5%8F%AF%E8%AF%81%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="toc-number">7.</span> <span class="toc-text">第13章 基于数据报(Datagram)的编程： 编写许可证服务器</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BD%AF%E4%BB%B6%E6%8E%A7%E5%88%B6"><span class="toc-number">7.1.</span> <span class="toc-text">软件控制</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%B8%E5%8F%AF%E8%AF%81%E7%AE%A1%E7%90%86"><span class="toc-number">7.2.</span> <span class="toc-text">许可证管理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E6%8A%A5socket"><span class="toc-number">7.3.</span> <span class="toc-text">数据报socket</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%81%E4%B8%8E%E6%95%B0%E6%8D%AE%E6%8A%A5%E7%9A%84%E6%AF%94%E8%BE%83"><span class="toc-number">7.3.1.</span> <span class="toc-text">流与数据报的比较</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#sendto"><span class="toc-number">7.3.2.</span> <span class="toc-text">sendto()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#recvfrom"><span class="toc-number">7.3.3.</span> <span class="toc-text">recvfrom()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E6%8A%A5%E5%BA%94%E7%AD%94"><span class="toc-number">7.3.4.</span> <span class="toc-text">数据报应答</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%B8%E5%8F%AF%E8%AF%81%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="toc-number">7.4.</span> <span class="toc-text">许可证服务器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%84%E7%90%86%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98"><span class="toc-number">7.5.</span> <span class="toc-text">处理一些问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%B4%A9%E6%BA%83"><span class="toc-number">7.5.1.</span> <span class="toc-text">客户端崩溃</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%B4%A9%E6%BA%83"><span class="toc-number">7.5.2.</span> <span class="toc-text">服务器崩溃</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BC%96%E8%AF%91%E5%91%BD%E4%BB%A4"><span class="toc-number">7.5.3.</span> <span class="toc-text">编译命令</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%86%E5%B8%83%E5%BC%8F%E8%AE%B8%E5%8F%AF%E8%AF%81%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="toc-number">7.6.</span> <span class="toc-text">分布式许可证服务器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%87%8D%E5%A4%8D%E7%9A%84%E8%BF%9B%E7%A8%8BID"><span class="toc-number">7.6.1.</span> <span class="toc-text">重复的进程ID</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9E%E6%94%B6%E7%A5%A8%E6%8D%AE"><span class="toc-number">7.6.2.</span> <span class="toc-text">回收票据</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BB%E6%9C%BA%E5%B4%A9%E6%BA%83"><span class="toc-number">7.6.3.</span> <span class="toc-text">主机崩溃</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#unix%E5%9F%9Fsocket"><span class="toc-number">7.7.</span> <span class="toc-text">unix域socket</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E5%90%8D%E4%BD%9C%E4%B8%BAsocket%E5%9C%B0%E5%9D%80"><span class="toc-number">7.7.1.</span> <span class="toc-text">文件名作为socket地址</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BC%96%E8%AF%91%E6%8C%87%E4%BB%A4%E3%80%81%E8%BF%90%E8%A1%8C"><span class="toc-number">7.7.2.</span> <span class="toc-text">编译指令、运行</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%8F%E7%BB%93-1"><span class="toc-number">7.8.</span> <span class="toc-text">小结</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC14%E7%AB%A0%E7%BA%BF%E7%A8%8B%E6%9C%BA%E5%88%B6%EF%BC%9A%E5%B9%B6%E5%8F%91%E5%87%BD%E6%95%B0%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="toc-number">8.</span> <span class="toc-text">第14章	线程机制：并发函数的使用</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BA%BF%E7%A8%8B"><span class="toc-number">8.1.</span> <span class="toc-text">线程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#pthread-create"><span class="toc-number">8.1.1.</span> <span class="toc-text">pthread_create()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#pthread-join"><span class="toc-number">8.1.2.</span> <span class="toc-text">pthread_join()</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BA%BF%E7%A8%8B%E9%97%B4%E7%9A%84%E5%88%86%E5%B7%A5%E5%90%88%E4%BD%9C"><span class="toc-number">8.2.</span> <span class="toc-text">线程间的分工合作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#twordcount1-c"><span class="toc-number">8.2.1.</span> <span class="toc-text">twordcount1.c</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#twordcount2-c"><span class="toc-number">8.2.2.</span> <span class="toc-text">twordcount2.c</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#twordcount3-c"><span class="toc-number">8.2.3.</span> <span class="toc-text">twordcount3.c</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%92%E6%96%A5%E9%94%81"><span class="toc-number">8.2.4.</span> <span class="toc-text">互斥锁</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#pthread-mutex-lock"><span class="toc-number">8.2.4.1.</span> <span class="toc-text">pthread_mutex_lock()</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#pthread-mutex-unlock"><span class="toc-number">8.2.4.2.</span> <span class="toc-text">pthread_mutex_unlock()</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#14-4%E7%BA%BF%E7%A8%8B%E4%B8%8E%E8%BF%9B%E7%A8%8B"><span class="toc-number">8.3.</span> <span class="toc-text">14.4线程与进程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%85%B1%E4%BA%AB%E6%95%B0%E6%8D%AE%E7%A9%BA%E9%97%B4"><span class="toc-number">8.3.1.</span> <span class="toc-text">1.共享数据空间</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%96%87%E4%BB%B6%E6%8F%8F%E8%BF%B0%E7%AC%A6"><span class="toc-number">8.3.2.</span> <span class="toc-text">2.文件描述符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E8%BF%9B%E7%A8%8BID"><span class="toc-number">8.3.3.</span> <span class="toc-text">3.进程ID</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86"><span class="toc-number">8.3.4.</span> <span class="toc-text">信号处理</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#14-5-%E7%BA%BF%E7%A8%8B%E9%97%B4%E4%BA%92%E9%80%9A%E6%B6%88%E6%81%AF"><span class="toc-number">8.4.</span> <span class="toc-text">14.5 线程间互通消息</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#pthread-cond-wait"><span class="toc-number">8.4.1.</span> <span class="toc-text">pthread_cond_wait</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#pthread-cond-signal"><span class="toc-number">8.4.2.</span> <span class="toc-text">pthread_cond_signal</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/05/27/NKwebserver/" title="NKwebserver">NKwebserver</a><time datetime="2023-05-27T12:32:54.000Z" title="发表于 2023-05-27 20:32:54">2023-05-27</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/05/21/csapp/" title="csapp">csapp</a><time datetime="2023-05-21T12:04:55.000Z" title="发表于 2023-05-21 20:04:55">2023-05-21</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/05/05/STL/" title="STL">STL</a><time datetime="2023-05-05T11:59:39.000Z" title="发表于 2023-05-05 19:59:39">2023-05-05</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/04/25/linux_parctice/" title="《Unix/Linux编程实践教程》学习心得">《Unix/Linux编程实践教程》学习心得</a><time datetime="2023-04-25T13:54:14.000Z" title="发表于 2023-04-25 21:54:14">2023-04-25</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/04/25/hexo_foundation/" title="hexo基础教程">hexo基础教程</a><time datetime="2023-04-25T13:52:25.000Z" title="发表于 2023-04-25 21:52:25">2023-04-25</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By guesscyj</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
