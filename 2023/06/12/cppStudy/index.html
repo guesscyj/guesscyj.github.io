@@ -1,0 +1,264 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>cppStudy | BLOG</title><meta name="author" content="guesscyj"><meta name="copyright" content="guesscyj"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="c++相关学习笔记为什么学习c++,c++难学易用，拥有广博的语法，能够实现各种各样的东西,巨大而变化多端的设计可以表现出来，同时也有可能导致你的代码难以理解、不易维护、不易扩充等。本文章基于《Effective c++》，《Effective Modern c++》等各类数据及网络文章学习总结而得。 1.NULL和nullptrnullptr为c++关键字，NULL为宏定义 c++中定义: 12">
+<meta property="og:type" content="article">
+<meta property="og:title" content="cppStudy">
+<meta property="og:url" content="http://example.com/2023/06/12/cppStudy/index.html">
+<meta property="og:site_name" content="BLOG">
+<meta property="og:description" content="c++相关学习笔记为什么学习c++,c++难学易用，拥有广博的语法，能够实现各种各样的东西,巨大而变化多端的设计可以表现出来，同时也有可能导致你的代码难以理解、不易维护、不易扩充等。本文章基于《Effective c++》，《Effective Modern c++》等各类数据及网络文章学习总结而得。 1.NULL和nullptrnullptr为c++关键字，NULL为宏定义 c++中定义: 12">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png">
+<meta property="article:published_time" content="2023-06-12T07:22:16.000Z">
+<meta property="article:modified_time" content="2023-06-13T13:46:47.218Z">
+<meta property="article:author" content="guesscyj">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2023/06/12/cppStudy/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  }
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'cppStudy',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-06-13 21:46:47'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">8</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">2</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><hr/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="BLOG"><span class="site-name">BLOG</span></a></span><div id="menus"><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">cppStudy</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-06-12T07:22:16.000Z" title="发表于 2023-06-12 15:22:16">2023-06-12</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-06-13T13:46:47.218Z" title="更新于 2023-06-13 21:46:47">2023-06-13</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="cppStudy"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="c-相关学习笔记"><a href="#c-相关学习笔记" class="headerlink" title="c++相关学习笔记"></a>c++相关学习笔记</h1><p>为什么学习c++,c++难学易用，拥有广博的语法，能够实现各种各样的东西,巨大而变化多端的设计可以表现出来，同时也有可能导致你的代码难以理解、不易维护、不易扩充等。本文章基于《Effective c++》，《Effective Modern c++》等各类数据及网络文章学习总结而得。</p>
+<h2 id="1-NULL和nullptr"><a href="#1-NULL和nullptr" class="headerlink" title="1.NULL和nullptr"></a>1.NULL和nullptr</h2><p>nullptr为c++关键字，NULL为宏定义</p>
+<p>c++中定义:</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* Define NULL pointer value */</span></span><br><span class="line"><span class="meta">#<span class="keyword">ifndef</span> NULL</span></span><br><span class="line">    <span class="meta">#<span class="keyword">ifdef</span> __cplusplus</span></span><br><span class="line">        <span class="meta">#<span class="keyword">define</span> NULL    0</span></span><br><span class="line">    <span class="meta">#<span class="keyword">else</span>  <span class="comment">/* __cplusplus */</span></span></span><br><span class="line">        <span class="meta">#<span class="keyword">define</span> NULL    ((void *)0)</span></span><br><span class="line">    <span class="meta">#<span class="keyword">endif</span>  <span class="comment">/* __cplusplus */</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">endif</span>  <span class="comment">/* NULL */</span></span></span><br></pre></td></tr></table></figure>
+
+<p>c中定义:</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> NULL    ((void *)0)</span></span><br></pre></td></tr></table></figure>
+
+<p>为什么c与c++中的定义不同？</p>
+<p>c++的重载机制：c++NULL不支持void*的隐式转换</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">void Func(char *);</span><br><span class="line">void Func(int);</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    Func(NULL);//调用Func(int)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>nullptr用于标识空指针，是std::nullptr_t类型的(constexpr)变量。可以转换成如何指针类型和bool类型（为了兼容普通指针可以作为条件判断语句的写法)，但不能转换为整数。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">char</span> *p1 = <span class="literal">nullptr</span>;     <span class="comment">// 正确</span></span><br><span class="line"><span class="type">int</span>  *p2 = <span class="literal">nullptr</span>;     <span class="comment">// 正确</span></span><br><span class="line"><span class="type">bool</span> b = <span class="literal">nullptr</span>;       <span class="comment">// 正确. if(b)判断为false</span></span><br><span class="line"><span class="type">int</span> a = <span class="literal">nullptr</span>;        <span class="comment">// error</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="2-explicit关键字和强制类型转换"><a href="#2-explicit关键字和强制类型转换" class="headerlink" title="2.explicit关键字和强制类型转换"></a>2.explicit关键字和强制类型转换</h2><p>explicit使隐式申明不能调用</p>
+<h2 id="3-将c-视为语言联邦，而非单一语言"><a href="#3-将c-视为语言联邦，而非单一语言" class="headerlink" title="3.将c++视为语言联邦，而非单一语言"></a>3.将c++视为语言联邦，而非单一语言</h2><p>c++一开始的名称为c with classes，随着后续的更新，越来越成熟，引入了各种各样的特性，c++有4个主要部分</p>
+<ul>
+<li>C</li>
+<li>Object-Oriented C++</li>
+<li>Template C++</li>
+<li>STL</li>
+</ul>
+<p>c++以c为基础，拓展了许多的功能。Object-Oriented c++为这门语言带来了class、encapsulation（封装）、inheritance(继承)、polymorphism(多态)、virtual(动态绑定)。Template C++为这门语言带来了generic programming(范型编程)，为代码的重用提供了基础。STL是个template程序库，对contaimers(容器)、iterators(迭代器)、algorithms(算法)、function objects(函数对象)的规约有极佳的紧密配合与协调。</p>
+<h2 id="4-尽量以const-enum-inline替换-define"><a href="#4-尽量以const-enum-inline替换-define" class="headerlink" title="4.尽量以const,enum,inline替换#define"></a>4.尽量以const,enum,inline替换#define</h2><p>prefer consts,enum,inlines to #defines.</p>
+<p>Symbol table（符号表、记号表），#define 是不会被语法检查，宏，在编译之前，它所用的符号在预处理时就处理过来，所以在具体编译时，没有相关信息。</p>
+<p>为什么少用#define ?</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> ASPECT_RATIO 1.234</span></span><br></pre></td></tr></table></figure>
+
+<p>当使用该常量ASPECT_RATIO而发生错误时，会报错1.234而非（ASPECT_RATIO,该常量可能被定义为0或者其他错误)。对于多文件，难以查询预定义的地址，增加了阅读难度。宏替换可能会导致object code(目标码)出现多次。使用一个常量进行代替。</p>
+<p>代替：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">const</span> <span class="type">double</span> Asp = <span class="number">1.234</span>	<span class="comment">//大写开头通常表示宏</span></span><br></pre></td></tr></table></figure>
+
+<p>特殊：</p>
+<ol>
+<li>常量指针</li>
+</ol>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">const</span> <span class="type">char</span> * <span class="type">const</span> authorName = <span class="string">&quot;NAME&quot;</span></span><br><span class="line">    <span class="comment">//将指针和指针所指的值都声明为常量，是一种很好的设计,（常量）</span></span><br><span class="line">    <span class="comment">//但用string来表示更好</span></span><br><span class="line"><span class="type">const</span> std::string <span class="built_in">authorName</span>(<span class="string">&quot;NAME&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>class专属常量：</li>
+</ol>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">ClassName</span> &#123;</span><br><span class="line">	<span class="type">static</span> <span class="type">const</span> <span class="type">int</span> count = <span class="number">5</span>;</span><br><span class="line">    <span class="type">int</span> source[count];</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//#define在类中定义，无法提供封装性(没有private #define)</span></span><br></pre></td></tr></table></figure>
+
+<p>无法使用宏来初始化数组（编译时无法读取宏常量，但编译器在编译阶段必须需要数组的长度），可用enum来代替（某项编译器规定不能使用static int 来初始化数组。对enum，#define取地址就不合法，但对const合法，所以使用enum可以防止他人获得一个pointer或reference执行常量。</p>
+<p>宏定义可以减少函数调用的开支，但难以阅读</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> CALL_WITH_MAX(a,b) f((a)&gt;(b)? (a):(b))</span></span><br></pre></td></tr></table></figure>
+
+<p>所以可以用inline函数来代替，带来了宏的效率和类型安全性,和一般函数的可预见性</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</span></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="type">void</span> <span class="title">callWithMax</span><span class="params">(<span class="type">const</span> T&amp; a,<span class="type">const</span> T&amp; b)</span></span>&#123;</span><br><span class="line"><span class="built_in">f</span>(a&gt;b ? a:b);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//使用inline来代替,编译器处理调用内联函数的语句时，不会将该语句编译成函数调用的指令，而是直接将整个函数体的代码插人调用语句处，就像整个函数体在调用处被重写了一遍一样。减少了函数调用的开销</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="5-尽量使用const"><a href="#5-尽量使用const" class="headerlink" title="5.尽量使用const"></a>5.尽量使用const</h2><p>use const whenever possible</p>
+<p>当一个对象不该被改动时，就该对其进行const声明，通过编译器来进行保证。</p>
+<p>一些能使用const修饰的内容</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">char</span> greeting[] = <span class="string">&quot;hello&quot;</span>;</span><br><span class="line"><span class="type">char</span> *p = greeting;</span><br><span class="line"><span class="type">const</span> <span class="type">char</span> *p = greeting;<span class="comment">//引用不能改</span></span><br><span class="line"><span class="type">char</span>* <span class="type">const</span> p = greeting;<span class="comment">//指针不能改</span></span><br><span class="line"><span class="type">const</span> <span class="type">char</span>* <span class="type">const</span> p = greeting;<span class="comment">//两者都不改</span></span><br></pre></td></tr></table></figure>
+
+<p>const关键字出现在<strong>星号左边</strong>，表示被指物是常量；出现在星号右边，表示指针为常量。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">f1</span><span class="params">(<span class="type">const</span> Widget* pw)</span></span>;	= <span class="type">void</span> <span class="built_in">f2</span>(Widget <span class="type">const</span> *pw);</span><br></pre></td></tr></table></figure>
+
+<p>const最具威力的用法是面对函数声明时的应用。在一个函数声明式内，const可以和函数返回值、各参数、函数本身产生关联。</p>
+<p><strong>令函数返回一个常量值，往往可以降低因客户错误而造成的意外，而又不至于放弃安全性和高效性</strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Rational</span>&#123;...&#125;;</span><br><span class="line"><span class="type">const</span> Rational <span class="keyword">operator</span>*(<span class="type">const</span> Rational &amp;lhs,<span class="type">const</span> Rational &amp;rhs);</span><br></pre></td></tr></table></figure>
+
+<p>可以防止出现这种代码编写错误，防止出现无意义的赋值，使class接口比较容易理解，哪个函数可以改动对象内容，使“操作const”对象成为可能。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">if(a*b=c)...</span><br></pre></td></tr></table></figure>
+
+<p>成员函数后面的 <code>const</code> 修饰符可以用于指定该成员函数是不会修改对象的状态的（成员变量），也就是说该函数不会对对象进行写操作。使用 const 修饰符可以使得编译器对这个成员函数做出一些特殊的优化，同时也可以保证程序的安全性。对成员变量添加mutable进行修饰，之后便可以在const成员函数中进行修改</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">mutable</span> <span class="type">int</span> i;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">incCounter</span><span class="params">()</span><span class="type">const</span></span>&#123;</span><br><span class="line">    i++；</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>一些指针：</p>
+<p>指针与常量</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> x;</span><br><span class="line"><span class="type">int</span> * p1 = &amp;x; <span class="comment">// 指针可以被修改，值也可以被修改</span></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> * p2 = &amp;x; <span class="comment">// 指针可以被修改，值不可以被修改（const int）</span></span><br><span class="line"><span class="type">int</span> * <span class="type">const</span> p3 = &amp;x; <span class="comment">// 指针不可以被修改（* const），值可以被修改</span></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> * <span class="type">const</span> p4 = &amp;x; <span class="comment">// 指针不可以被修改，值也不可以被修改</span></span><br></pre></td></tr></table></figure>
+
+<p>指针函数与函数指针</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// addition是指针函数，一个返回类型是指针的函数</span></span><br><span class="line"><span class="function"><span class="type">int</span>* <span class="title">addition</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> b)</span> </span>&#123;</span><br><span class="line"><span class="type">int</span>* sum = <span class="keyword">new</span> <span class="built_in">int</span>(a + b);</span><br><span class="line"><span class="keyword">return</span> sum;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">subtraction</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> b)</span> </span>&#123;</span><br><span class="line"><span class="keyword">return</span> a - b;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">operation</span><span class="params">(<span class="type">int</span> x, <span class="type">int</span> y, <span class="type">int</span> (*func)(<span class="type">int</span>, <span class="type">int</span>))</span> </span>&#123;</span><br><span class="line"><span class="keyword">return</span> (*func)(x,y);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// minus是函数指针，指向函数的指针</span></span><br><span class="line"><span class="built_in">int</span> (*minus)(<span class="type">int</span>, <span class="type">int</span>) = subtraction;</span><br><span class="line"><span class="number">3.2</span> Two Sum – <span class="number">9</span>/<span class="number">143</span> –</span><br><span class="line"><span class="type">int</span>* m = <span class="built_in">addition</span>(<span class="number">1</span>, <span class="number">2</span>);</span><br><span class="line"><span class="type">int</span> n = <span class="built_in">operation</span>(<span class="number">3</span>, *m, minus);</span><br></pre></td></tr></table></figure>
+
+<h2 id="6-确认对象被使用前已被初始化"><a href="#6-确认对象被使用前已被初始化" class="headerlink" title="6.确认对象被使用前已被初始化"></a>6.确认对象被使用前已被初始化</h2><p>make sure that objects are initialized before they’re used.</p>
+<p>c++的对象初始化反复无常</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> x;		<span class="comment">//在某些语境下，x被初始化为0</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Point</span>&#123;</span><br><span class="line">	<span class="type">int</span> x,y;</span><br><span class="line">&#125;</span><br><span class="line">Point p;</span><br><span class="line"><span class="comment">//p的成员变量有时候被初始化为0，有时候不会。</span></span><br></pre></td></tr></table></figure>
+
+<p>确保构造函数将每一个成员初始化</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">std::string theName;</span><br><span class="line"><span class="type">int</span> w;</span><br><span class="line">ABEnter::<span class="built_in">ABEnter</span>(<span class="type">const</span> std::string &amp; name)</span><br><span class="line">&#123;</span><br><span class="line">	theName = name;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//并不是初始化，是赋值，会先调用default构造函数,再copy assignment</span></span><br><span class="line">ABEnter::<span class="built_in">ABEnter</span>(<span class="type">const</span> std::string&amp;name):<span class="built_in">theName</span>(name)&#123;&#125;</span><br><span class="line"><span class="comment">//正确的初始化,在default进行了赋值.只调用一次copy构造更高效。</span></span><br><span class="line"><span class="comment">//成员初值列（member initialization list)</span></span><br><span class="line"><span class="comment">//无参初始化</span></span><br><span class="line">ABEnter::<span class="built_in">ABEnter</span>(<span class="type">const</span> std::string&amp; name):<span class="built_in">theName</span>(),<span class="built_in">w</span>(<span class="number">1</span>)&#123;&#125;</span><br><span class="line"><span class="comment">//构造初始化中，列出所有成员变量，以及哪些成员变量可以不用初始值。</span></span><br><span class="line"><span class="comment">//当某些成员为const或references，他们就需要初值，不能被赋值。</span></span><br><span class="line"><span class="comment">//注意初始化顺序,子类和基类的初始化顺序,先父类后子类，析构顺序，先子类，后父类</span></span><br></pre></td></tr></table></figure>
+
+<p>non-local static对象的初始化次序:</p>
+<p>static对象：其寿命从构造到程序结束，因此stack和heap-based对象都将被排除</p>
+<p>包括golbal对象、定义于namespace作用域内的对象、在classes内、在函数内、以及在file作用域内被声明为static的对象。函数内的static对象称为local static对象，其他static对象称为non-local static对象。程序结束时static对象将会自动销毁。</p>
+<p>**编译单元(translation unit)**是指产出单一目标文件(single object file)的源码。它基本上是单一源码文件加上所含入的头文件(#include files)。</p>
+<p>如果某一个non-local static对象使用了另一个non-local static对象,但该对象为先初始化，则会造成无法建立。为什么不规定non-local static对象的次序？绝对初始化顺序非常困难。</p>
+<p>如何解决？</p>
+<p>将每个non-local static对象放置在自己专属的函数内(在函数内声明为static)，将non-local static对象使用local static替换。<strong>单例模式</strong>。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">FileSystem</span>&#123;...&#125;;</span><br><span class="line"><span class="function">FileSystem &amp;<span class="title">tfs</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="type">static</span> FileSystem fs;</span><br><span class="line">	<span class="keyword">return</span> fs;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Directory</span>::Directory&#123;...&#125;;</span><br><span class="line">Directory::<span class="built_in">Directory</span>(params)</span><br><span class="line">&#123;</span><br><span class="line">	...</span><br><span class="line">    std::<span class="type">size_t</span> disks = <span class="built_in">tfs</span>().<span class="built_in">numDisks</span>();</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br><span class="line"><span class="function">Directory&amp; <span class="title">tempDir</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="type">static</span> Directory td;</span><br><span class="line">    <span class="keyword">return</span> td;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>手工初始化内置型non-member对象</li>
+<li>使用成员初值列(member initialization lists)对付对象的所有成分</li>
+<li>加强设计</li>
+</ul>
+<h2 id="7-了解C-默认编写并调用哪些函数"><a href="#7-了解C-默认编写并调用哪些函数" class="headerlink" title="7.了解C++默认编写并调用哪些函数"></a>7.了解C++默认编写并调用哪些函数</h2><p>know what functions C++ silently writes and calls.</p>
+<p>empty class(空类)？在C++处理后，编译器会自动为其声明一个copy构造函数、copy assignment操作符、和一个析构函数。没构造也会有声明默认构造。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Empty</span>&#123;&#125;;</span><br><span class="line">---------------------------------------</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Empty</span>&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">Empty</span>()&#123;...&#125;</span><br><span class="line">    <span class="built_in">Empty</span>(<span class="type">const</span> Empty&amp; rhs)&#123;...&#125;<span class="comment">//copy</span></span><br><span class="line">    ~<span class="built_in">Empty</span>()&#123;...&#125;</span><br><span class="line">    </span><br><span class="line">    mpty&amp; <span class="keyword">operator</span>=(<span class="type">const</span> Empty&amp; rhs)&#123;...&#125;<span class="comment">//copy assignment</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//这些函数只有在使用时，才会产出</span></span><br></pre></td></tr></table></figure>
+
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="http://example.com">guesscyj</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2023/06/12/cppStudy/">http://example.com/2023/06/12/cppStudy/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">BLOG</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2023/06/12/ZRstudy/" title="ZRstudy"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">ZRstudy</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">guesscyj</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">8</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">2</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#c-%E7%9B%B8%E5%85%B3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0"><span class="toc-number">1.</span> <span class="toc-text">c++相关学习笔记</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-NULL%E5%92%8Cnullptr"><span class="toc-number">1.1.</span> <span class="toc-text">1.NULL和nullptr</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-explicit%E5%85%B3%E9%94%AE%E5%AD%97%E5%92%8C%E5%BC%BA%E5%88%B6%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2"><span class="toc-number">1.2.</span> <span class="toc-text">2.explicit关键字和强制类型转换</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E5%B0%86c-%E8%A7%86%E4%B8%BA%E8%AF%AD%E8%A8%80%E8%81%94%E9%82%A6%EF%BC%8C%E8%80%8C%E9%9D%9E%E5%8D%95%E4%B8%80%E8%AF%AD%E8%A8%80"><span class="toc-number">1.3.</span> <span class="toc-text">3.将c++视为语言联邦，而非单一语言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E5%B0%BD%E9%87%8F%E4%BB%A5const-enum-inline%E6%9B%BF%E6%8D%A2-define"><span class="toc-number">1.4.</span> <span class="toc-text">4.尽量以const,enum,inline替换#define</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E5%B0%BD%E9%87%8F%E4%BD%BF%E7%94%A8const"><span class="toc-number">1.5.</span> <span class="toc-text">5.尽量使用const</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-%E7%A1%AE%E8%AE%A4%E5%AF%B9%E8%B1%A1%E8%A2%AB%E4%BD%BF%E7%94%A8%E5%89%8D%E5%B7%B2%E8%A2%AB%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="toc-number">1.6.</span> <span class="toc-text">6.确认对象被使用前已被初始化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-%E4%BA%86%E8%A7%A3C-%E9%BB%98%E8%AE%A4%E7%BC%96%E5%86%99%E5%B9%B6%E8%B0%83%E7%94%A8%E5%93%AA%E4%BA%9B%E5%87%BD%E6%95%B0"><span class="toc-number">1.7.</span> <span class="toc-text">7.了解C++默认编写并调用哪些函数</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/06/12/cppStudy/" title="cppStudy">cppStudy</a><time datetime="2023-06-12T07:22:16.000Z" title="发表于 2023-06-12 15:22:16">2023-06-12</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/06/12/ZRstudy/" title="ZRstudy">ZRstudy</a><time datetime="2023-06-12T06:12:22.000Z" title="发表于 2023-06-12 14:12:22">2023-06-12</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/06/04/design-patterns/" title="design_patterns">design_patterns</a><time datetime="2023-06-04T14:01:32.000Z" title="发表于 2023-06-04 22:01:32">2023-06-04</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/05/27/NKwebserver/" title="NKwebserver">NKwebserver</a><time datetime="2023-05-27T12:32:54.000Z" title="发表于 2023-05-27 20:32:54">2023-05-27</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/05/21/csapp/" title="csapp">csapp</a><time datetime="2023-05-21T12:04:55.000Z" title="发表于 2023-05-21 20:04:55">2023-05-21</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By guesscyj</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
