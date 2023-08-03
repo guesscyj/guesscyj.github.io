@@ -52,7 +52,7 @@
   isHome: true,
   isHighlightShrink: false,
   isToc: false,
-  postUpdate: '2023-07-13 20:55:19'
+  postUpdate: '2023-08-03 19:31:28'
 }</script><noscript><style type="text/css">
   #nav {
     opacity: 1
@@ -156,7 +156,100 @@
       }
     }
     detectApple()
-    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">15</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">2</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><hr/></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="BLOG"><span class="site-name">BLOG</span></a></span><div id="menus"><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">BLOG</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/07/13/STL/" title="STL">STL</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-07-13T12:54:43.000Z" title="发表于 2023-07-13 20:54:43">2023-07-13</time></span></div><div class="content"></div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/07/04/network/" title="network">network</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-07-04T03:05:47.000Z" title="发表于 2023-07-04 11:05:47">2023-07-04</time></span></div><div class="content">网络编程学习
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">19</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">2</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><hr/></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="BLOG"><span class="site-name">BLOG</span></a></span><div id="menus"><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">BLOG</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/08/03/OS-thread/" title="OS-thread">OS-thread</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-08-03T11:26:02.000Z" title="发表于 2023-08-03 19:26:02">2023-08-03</time></span></div><div class="content">并发并发:介绍线程(thread)
+经典观点是一个程序只有一个执行点(一个程序计数器，用来存放要执行的指令)，但多线程(multi-threaded)程序会有多个执行点(多个程序计数器，每个都用于取指令和执行)。共享地址空间，从而能够访问相同的数据
+每个线程拥有自己的寄存器，一如果两个线程运行在一个处理器上，从运行一个线程(T1)切换到另一个线程(T2)，必定发生上下文切换(context switch)。
+线程切换，将状态保存到进程控制块(Process Control Block,PCB)。多个线程控制块(Thread Control Block，TCB)。保存每个线程的状态。两者之间的区别在于线程的地址空间保存不变（不需要切换当前使用的页表)
+&#x2F;&#x2F;thread-MultiThread
+拥有多线程的进程，有两个线程，地址空间不同。
+所有位于栈上的变量、参数、返回值和其他放在栈上的东西，将被放置在有时称为线程本地（thread-local）存储的地方，即相关线程的栈。
+线程创建1234567891011121314151617181920#include &lt; ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/07/25/stm32-study/" title="stm32-study">stm32-study</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-07-25T10:44:02.000Z" title="发表于 2023-07-25 18:44:02">2023-07-25</time></span></div><div class="content">stm32外设：除了处理器以外的设备
+分辨率：像素点128*64的矩阵
+key:
+收发器:数据交互和传输(UART协议，几个停止位)
+UART串口
+SPI:多设备交互,工作模式
+ADC:模拟信号转换位数字信号
+IIC:I^2^C:SCL,SDA
+I^2^S:音频接收
+SDIO:
+JTAG_MODE：烧写程序口
+JTAG_EN:使能(是否工作)
+上拉电阻:(说的是电阻的作用)
+下拉电阻:
+电路中三要素:负载，中间环节，电源
+GPIOGPIO(General Purpose Input Output):通用输入输出口
+
+可配置为8种输入输出模式
+引脚电平:0~3.3V,0为低电平，3.3为高电平，部分可容忍5V
+输出模式下&#x3D;&#x3D;可控制端口输出高低电平&#x3D;&#x3D;、用以驱动LED，控制蜂鸣器、模拟通信协议输出时序等(只要是高低电平完成的就可用)
+输入模式下&#x3D;&#x3D;可读取端口的高低电平或电压&#x3D;&#x3D;，用于读取按键输入、外接模块电平信号输入、ADC电压采集、模拟通信协议接收数据等。
+
+GPIO的基本结构:
+在STM32中，所有GPIO ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/07/18/OSBlog/" title="OSBlog">OSBlog</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-07-18T07:57:45.000Z" title="发表于 2023-07-18 15:57:45">2023-07-18</time></span></div><div class="content">OS哈工大 李治军网课学习笔记
+02应用通过操作系统的接口使用硬件
+操作系统提供的接口:open,read,fork等
+开机时发生了什么事情:
+
+打开电源,计算机开始工作
+计算机如何工作:取指执行
+
+通用图灵机:
+
+设置控制器动作(CPU，处理逻辑,应用程序)
+控制器状态
+数据
+
+首先将程序加载进内存，使用PC(Program Counter)指针指向它，然后取指执行
+X86PC:
+(1)x86刚开机时CPU处于实模式
+(2)开机时，CS &#x3D; 0xFFFF，IP&#x3D;0x0000CS：代码端寄存器，IP偏移
+(3)寻址0xFFFF0(ROM BIOS映射区,BIOS:base input output system)，为什么是0xFFFF0，CS左移4位+IP。唯一有代码的地方
+(4)检查RAM，键盘，显示器，软硬磁盘
+(5)将磁盘0磁道0扇区(1个扇区512字节,00是操作系统的引导扇区)读入0x7c00处
+(6)设置cs&#x3D;0x07c0,IP&#x3D;0x0000
+引导扇区代码bootsect.s(汇编代码)
+POSIX(Portable Operatin ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/07/14/OS/" title="OS">OS</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-07-14T07:26:36.000Z" title="发表于 2023-07-14 15:26:36">2023-07-14</time></span></div><div class="content">《操作系统导论》笔记
+ 虚拟化
+ 并发
+ 持久化
+
+操作系统介绍程序运行时会发生什么:执行指令
+
+处理器c从内存中获取(fetch)一条指令
+对其进行解码(decode)
+执行(excute)它
+
+实际上，有一类软件负责让程序运行变得容易（甚至允许你同时运行多个程序），允许程序共享内存，让程序能够与设备交互，以及其他类似的有趣的工作。这些软件称为操作系统（Operating System，OS）③，因为它们负责确保系统既易于使用又正确高效地运行。
+操作系统利用”虚拟化”(virtualzation)，将物理(physical)资源(如处理器、内存或磁盘)转化为更通用、更强大且更易于使用的虚拟形式。因此，有时将操作系统称为虚拟机(virtual machine)
+为了利用虚拟机的功能(如运行程序，分配内存或访问文件)操作系统提供了一些接口(API)。由于操作系统提供系统调用(system call)来运行程序、访问内存和设备，并进行其他相关操作。有时也会说操作系统为应用程序提供了一个标准库(standard library)。因为虚拟化让许多程序运行（从而共享 CPU），让许多程序可以同 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/07/13/STL/" title="STL">STL</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-07-13T12:54:43.000Z" title="发表于 2023-07-13 20:54:43">2023-07-13</time></span></div><div class="content">STLC++ STLSTL(Standard Template Library):标准模板库
+标准库以header files形式呈现：
+
+C++标准库的header files不带副档名(.h):#include &lt; vector&gt;
+新式C header files 不带副档名.h:#include 
+旧式C header files 带有副档名.h,仍可用:#incldue &lt; stdio.h &gt;
+新式headers内的组件封装于namespace std
+using namespace std::
+using std::cout
+
+
+旧式headers内的组件不封装于namespace std;
+
+STL六大组件:
+
+ 容器(Containers)
+ 算法(Algorithms)
+ 迭代器(Iterators)
+ 仿函数(Functors)
+ 适配器（配接器)(Adapters)
+ 空间配置器(Allocators)
+
+
+STL六大组件的交互关系:
+1.容器通过空间
+2.算法通过迭代器存储容器中的内容
+3.仿函数可以协助算法完成不同的策略的变化
+4.适配器 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/07/04/network/" title="network">network</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-07-04T03:05:47.000Z" title="发表于 2023-07-04 11:05:47">2023-07-04</time></span></div><div class="content">网络编程学习
  客户&#x2F;服务器程序
  并发
 
@@ -168,6 +261,41 @@ ls命令查看文件与目录的命令
 12345-l:列出长数据串，包含文件的属性与权限数据等-a:列出所有文件，包括隐藏文件-d:列出目录本身，而不是目录的文件数据-h:将文件容量以较易读的方式(GB,KB)列出-R:连同子目录的内容一起列出
 
 grep命令分析一行的信息，若当中有我们所需要的信息，就将该行显示出来，该命令通常和管道命令一起使用。
+内存管理请求内存的方式
+
+
+
+分配
+释放
+类属
+可否重载
+
+
+
+malloc()
+free()
+C函数
+不可
+
+
+new
+delete
+C++表达式(expressions)
+不可
+
+
+::operator new()
+::operator_delete()
+C++函数
+可
+
+
+allocator&lt; T &gt;::allocatr()
+allocator&lt; T &gt;::deallocate()
+C++标准库
+可自由设计并搭配容器
+
+
 </div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/06/29/sql/" title="sql">sql</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-06-29T09:39:21.000Z" title="发表于 2023-06-29 17:39:21">2023-06-29</time></span></div><div class="content">SQLSQL简介SQL (Structured Query Language:结构化查询语言) 是用于管理关系数据库管理系统（RDBMS）
 
 SQL 对大小写不敏感：SELECT 与 select 是相同的。
@@ -179,55 +307,4 @@ SQL 对大小写不敏感：SELECT 与 select 是相同的。
 4.巴斯-科德范式(BCNF):要求满足第三范式，并且消除主键依赖非主键的情况。任何主键都不能依赖非主键。
 范式的级别越高，数据重复性越低，更新操作时的数据一致性和完整性也更容易维护。但过度范式化可能导致查询复杂度增加，因此在实际设计数据库时需要权衡范式和实际需求之间的关系。
 需要注意的是，范式化只是数据库设计的一部分，具体的设计还需要考虑性能优化、数据访问模式等因素，以及根据具体业务需求进行适 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/06/26/Effective-STL/" title="Effective_STL">Effective_STL</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-06-26T10:51:33.000Z" title="发表于 2023-06-26 18:51:33">2023-06-26</time></span></div><div class="content">Effective STL1.慎重选择容器类型1.序列容器(vector String deque list)和关联容器()为主要的容器
-2.不要试图编写独立于容器类型的代码3.确保容器中的对象拷贝正确而高效4.调用empty而不是检查size()是否为05.区别成员函数优先于与之对应的单元素成员函数</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/06/20/thinking/" title="thinking">thinking</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-06-20T08:18:54.000Z" title="发表于 2023-06-20 16:18:54">2023-06-20</time></span></div><div class="content"></div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/06/15/cpp/" title="cpp">cpp</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-06-15T11:09:14.000Z" title="发表于 2023-06-15 19:09:14">2023-06-15</time></span></div><div class="content">CPP
-C++语法  类和对象  继承和多态  模板  异常处理  RAII技术  智能指针  类型转换运算符  运算符重载  Lambda表达式  move语义  右值引用  函数对象  STL容器和算法  正则表达式  多线程编程  内存管理
-设计模式  工厂模式  抽象工厂模式  单例模式  建造者模式  原型模式  适配器模式  桥接模式  装饰器模式  组合模式  外观模式  享元模式  代理模式  观察者模式  命令模式  模板方法模式  策略模式  职责链模式  迭代器模式  访问者模式  备忘录模式  状态模式  解释器模式11新特性  auto关键字  智能指针  lambda表达式  右值引用  移动语义  等等软件调试  调试器  断点调试  栈跟踪  日志和输出调试  内存调试  异常处理  多线程调试操作系统  进程和线程  线程同步和互斥  内存管理  文件系统和文件操作  进程间通信  网络编程  TCP&#x2F;IP协议栈。  套接字编程  网络字节序问题  进程调度和资源管理  编译细节  代码优化QT框架  Qwidget  QMainWindow ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/06/12/cppStudy/" title="cppStudy">cppStudy</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-06-12T07:22:16.000Z" title="发表于 2023-06-12 15:22:16">2023-06-12</time></span></div><div class="content">Effective C++为什么学习c++,c++难学易用，拥有广博的语法，能够实现各种各样的东西,巨大而变化多端的设计可以表现出来，同时也有可能导致你的代码难以理解、不易维护、不易扩充等。本文章基于《Effective c++》，《Effective Modern c++》等各类数据及网络文章学习总结而得。
-1.将c++视为语言联邦，而非单一语言c++一开始的名称为c with classes，随着后续的更新，越来越成熟，引入了各种各样的特性，c++有4个主要部分
-
-C
-Object-Oriented C++
-Template C++
-STL
-
-c++以c为基础，拓展了许多的功能。Object-Oriented c++为这门语言带来了class、encapsulation（封装）、inheritance(继承)、polymorphism(多态)、virtual(动态绑定)。Template C++为这门语言带来了generic programming(范型编程)，为代码的重用提供了基础。STL是个template程序库，对contaimers(容器)、iterators(迭代器)、a ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/06/12/ZRstudy/" title="ZRstudy">ZRstudy</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-06-12T06:12:22.000Z" title="发表于 2023-06-12 14:12:22">2023-06-12</time></span></div><div class="content">中软培训内容1.请手写出面向对象的知识要点
-2.请写出设计模式的单例模式，要求为线程安全的。
-3.使用ArrayList去除集合中字符串的重复值，字符串的内容相同。
-4.请分别说明HashMap、LinkedHashMap、TreeMap、HashTable之间的区别。
-5.请分别说明HashSet、LinkedHashSet、TreeSet之间的区别。
-6.请分别说明String、StringBuffer、StringBulider之间的区别
-7.请分别说明wait()、sleep()、notify()、notifyAll()之间的区别。
-8.请写出线程的生命周期流程
-9.请说明&#x3D;&#x3D;与equals方法的区别
-10.java中字符串常量存放在哪个区域
-</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/06/04/design-patterns/" title="design_patterns">design_patterns</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-06-04T14:01:32.000Z" title="发表于 2023-06-04 22:01:32">2023-06-04</time></span></div><div class="content">常见的设计模式的解析和实现设计模式的定义设计模式(Design Pattern)
-
-一套被反复使用的、多数人知晓的、经过分类编目的、代码设计经验的总结
-目的：为了可重用代码、让代码更容易被他人理解、提高代码的可靠性
-是一种用于对软件系统中不断重现的设计问题的解决方案进行文档化的技术
-是一种共享专家设计经验的技术
-
-设计模式的要素：
-
-模式名称(Pattern Name)
-问题(Problem)
-解决方案(Solution)
-效果(Comsequences)
-
-设计模式的分类
-创建型(Creational):主要用于创建对象，关注对象的创建机制，通过提供一种实例化对象的灵活方式来解耦客户端和对象的创建过程。
-结构型(Structural):主要用于处理类或对象的组合，关注对象之间的组合和关系，用于解决对象之间的接口定义和组合的问题。
-行为型(Behavioral):主要用于描述类或对象如何交互和怎样分配职责，关注对象之间的通信和协助方式，解决了对象之间的责任分配和算法封装的问题。
-
-创建型:
-
-工厂模式
-抽象工厂模式
-建造者模式
-原型模式
-单例模式
-
-结构型:
-
-适配器模式
-桥接模式
-组 ...</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/#content-inner">2</a><a class="extend next" rel="next" href="/page/2/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">guesscyj</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">15</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">2</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/07/13/STL/" title="STL">STL</a><time datetime="2023-07-13T12:54:43.000Z" title="发表于 2023-07-13 20:54:43">2023-07-13</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/07/04/network/" title="network">network</a><time datetime="2023-07-04T03:05:47.000Z" title="发表于 2023-07-04 11:05:47">2023-07-04</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/07/04/Linux/" title="Linux">Linux</a><time datetime="2023-07-04T00:57:11.000Z" title="发表于 2023-07-04 08:57:11">2023-07-04</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/06/29/sql/" title="sql">sql</a><time datetime="2023-06-29T09:39:21.000Z" title="发表于 2023-06-29 17:39:21">2023-06-29</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/06/26/Effective-STL/" title="Effective_STL">Effective_STL</a><time datetime="2023-06-26T10:51:33.000Z" title="发表于 2023-06-26 18:51:33">2023-06-26</time></div></div></div></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/test2/" style="font-size: 1.1em; color: #999">test2</a> <a href="/tags/test1/" style="font-size: 1.1em; color: #999">test1</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/07/"><span class="card-archive-list-date">七月 2023</span><span class="card-archive-list-count">3</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/06/"><span class="card-archive-list-date">六月 2023</span><span class="card-archive-list-count">7</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/05/"><span class="card-archive-list-date">五月 2023</span><span class="card-archive-list-count">3</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/04/"><span class="card-archive-list-date">四月 2023</span><span class="card-archive-list-count">2</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">15</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2023-07-13T12:55:19.353Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By guesscyj</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
+2.不要试图编写独立于容器类型的代码3.确保容器中的对象拷贝正确而高效4.调用empty而不是检查size()是否为05.区别成员函数优先于与之对应的单元素成员函数</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/06/20/thinking/" title="thinking">thinking</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-06-20T08:18:54.000Z" title="发表于 2023-06-20 16:18:54">2023-06-20</time></span></div><div class="content"></div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/#content-inner">2</a><a class="extend next" rel="next" href="/page/2/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">guesscyj</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">19</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">2</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/08/03/OS-thread/" title="OS-thread">OS-thread</a><time datetime="2023-08-03T11:26:02.000Z" title="发表于 2023-08-03 19:26:02">2023-08-03</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/07/25/stm32-study/" title="stm32-study">stm32-study</a><time datetime="2023-07-25T10:44:02.000Z" title="发表于 2023-07-25 18:44:02">2023-07-25</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/07/18/OSBlog/" title="OSBlog">OSBlog</a><time datetime="2023-07-18T07:57:45.000Z" title="发表于 2023-07-18 15:57:45">2023-07-18</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/07/14/OS/" title="OS">OS</a><time datetime="2023-07-14T07:26:36.000Z" title="发表于 2023-07-14 15:26:36">2023-07-14</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/07/13/STL/" title="STL">STL</a><time datetime="2023-07-13T12:54:43.000Z" title="发表于 2023-07-13 20:54:43">2023-07-13</time></div></div></div></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/test2/" style="font-size: 1.1em; color: #999">test2</a> <a href="/tags/test1/" style="font-size: 1.1em; color: #999">test1</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/08/"><span class="card-archive-list-date">八月 2023</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/07/"><span class="card-archive-list-date">七月 2023</span><span class="card-archive-list-count">6</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/06/"><span class="card-archive-list-date">六月 2023</span><span class="card-archive-list-count">7</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/05/"><span class="card-archive-list-date">五月 2023</span><span class="card-archive-list-count">3</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/04/"><span class="card-archive-list-date">四月 2023</span><span class="card-archive-list-count">2</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">19</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2023-08-03T11:31:28.135Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By guesscyj</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
